@@ -237,36 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Floating Preview Tooltip in /EXPERIENCE (Matches Frame 00:13)
-  const previewTooltip = document.getElementById('timelinePreview');
-  const timelineItems = document.querySelectorAll('.timeline-item');
-
-  timelineItems.forEach(item => {
-    item.addEventListener('mouseenter', (e) => {
-      const imgSrc = item.getAttribute('data-preview');
-      const caption = item.getAttribute('data-caption');
-      if (previewTooltip && imgSrc) {
-        document.getElementById('previewImg').src = imgSrc;
-        document.getElementById('previewText').textContent = caption;
-        previewTooltip.classList.add('active');
-      }
-    });
-
-    item.addEventListener('mousemove', (e) => {
-      if (previewTooltip) {
-        previewTooltip.style.left = `${e.clientX}px`;
-        previewTooltip.style.top = `${e.clientY}px`;
-      }
-    });
-
-    item.addEventListener('mouseleave', () => {
-      if (previewTooltip) {
-        previewTooltip.classList.remove('active');
-      }
-    });
-  });
-
-  // 5. Contact Dialog Modal
+  // 4. Contact Dialog Modal
   const contactModal = document.getElementById('contactDialog');
   const closeContactBtn = document.getElementById('closeContactBtn');
   const contactTriggers = document.querySelectorAll('.trigger-contact');
