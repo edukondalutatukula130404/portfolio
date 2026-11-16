@@ -118,6 +118,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ],
       metrics: '60fps Native UI • Offline-First Architecture • iOS & Android Deployed'
+    },
+    {
+      id: 'desktop-app',
+      category: 'desktop',
+      badge: 'DESKTOP APP',
+      tagline: 'InvoicePro Desktop Application Suite',
+      subtitle: 'InvoicePro Desktop',
+      author: 'Speshway Solutions Pvt Ltd',
+      liveUrl: 'https://github.com/edukondalutatukula130404/desktop-application',
+      tech: ['Electron', 'React', 'Node.js', 'MongoDB', 'NSIS Installer', 'Offline-First'],
+      image: 'assets/project-desktop.svg',
+      fullTitle: 'InvoicePro Desktop Application Suite',
+      leadDescription: 'A production cross-platform desktop application built with Electron, React, Node.js, and persistent local MongoDB storage for offline-first enterprise invoice generation, client billing, license authentication, and automated financial reporting.',
+      quote: '“Engineered the InvoicePro Desktop Application with robust Electron architecture, persistent local MongoDB synchronization, automated NSIS installers, and cryptographic licensing.”',
+      features: [
+        {
+          title: 'Cross-Platform Electron & React Core',
+          desc: 'High-performance desktop user interface built with React components, native OS window controls, and optimized background process management.'
+        },
+        {
+          title: 'Offline-First Persistent Local MongoDB',
+          desc: 'Embedded local MongoDB instance ensuring zero-latency data persistence, instant offline access, and automatic background cloud synchronization.'
+        },
+        {
+          title: 'Automated NSIS Windows Installer & Licensing',
+          desc: 'Custom build pipeline with electron-builder producing lightweight Windows NSIS installers and cryptographic license key authentication.'
+        }
+      ],
+      metrics: 'Zero-Latency Offline Mode • Windows NSIS Installer • 100% Local Data Privacy'
     }
   ];
 
