@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#110e1b"/>
+      <stop offset="50%" stop-color="#1e1633"/>
+      <stop offset="100%" stop-color="#0a0812"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4b72"/>
+      <stop offset="100%" stop-color="#9b51e0"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#9b51e0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#9b51e0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg1)" rx="16"/>
+  <ellipse cx="400" cy="250" rx="320" ry="180" fill="url(#glow1)" />
+
+  <g transform="translate(45, 35)">
+    <rect width="710" height="430" rx="14" fill="#151124" stroke="#2c2447" stroke-width="1.5"/>
+    
+    <!-- Window controls -->
+    <circle cx="25" cy="25" r="5" fill="#ff5f56"/>
+    <circle cx="42" cy="25" r="5" fill="#ffbd2e"/>
+    <circle cx="59" cy="25" r="5" fill="#27c93f"/>
+    <text x="355" y="30" fill="#a49cb8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">EduAssist AI • NLP Educational Chatbot Platform</text>
+    <line x1="0" y1="48" x2="710" y2="48" stroke="#2c2447" stroke-width="1"/>
+
+    <!-- Left Sidebar -->
+    <rect x="0" y="48" width="200" height="382" fill="#100c1e" rx="0"/>
+    <line x1="200" y1="48" x2="200" y2="430" stroke="#2c2447" stroke-width="1"/>
+    <text x="20" y="80" fill="#8d85a8" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1">ACADEMIC MODULES</text>
+    
+    <rect x="12" y="98" width="176" height="34" rx="7" fill="#231b38"/>
+    <circle cx="28" cy="115" r="4" fill="#9b51e0"/>
+    <text x="40" y="119" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="600">DSA &amp; Problem Solving</text>
+
+    <rect x="12" y="140" width="176" height="34" rx="7" fill="transparent"/>
+    <circle cx="28" cy="157" r="4" fill="#584e72"/>
+    <text x="40" y="161" fill="#8d85a8" font-family="sans-serif" font-size="11.5">Machine Learning Prep</text>
+
+    <rect x="12" y="182" width="176" height="34" rx="7" fill="transparent"/>
+    <circle cx="28" cy="199" r="4" fill="#584e72"/>
+    <text x="40" y="203" fill="#8d85a8" font-family="sans-serif" font-size="11.5">Database &amp; SQL Query</text>
+
+    <rect x="12" y="224" width="176" height="34" rx="7" fill="transparent"/>
+    <circle cx="28" cy="241" r="4" fill="#584e72"/>
+    <text x="40" y="245" fill="#8d85a8" font-family="sans-serif" font-size="11.5">Operating System Notes</text>
+
+    <rect x="12" y="340" width="176" height="65" rx="8" fill="#1b142d" stroke="#372a59" stroke-width="1"/>
+    <text x="22" y="362" fill="#ff7a99" font-family="sans-serif" font-size="11" font-weight="700">NLP Accuracy 96.8%</text>
+    <text x="22" y="380" fill="#a49cb8" font-family="sans-serif" font-size="10">Real-time inference &amp; responses</text>
+    <text x="22" y="394" fill="#675d83" font-family="sans-serif" font-size="9.5">Zero human intervention needed</text>
+
+    <!-- Chat Area -->
+    <!-- Message 1 (Student) -->
+    <rect x="340" y="75" width="345" height="52" rx="12" fill="#241c3b"/>
+    <text x="355" y="96" fill="#ffffff" font-family="sans-serif" font-size="12">How does Natural Language Processing</text>
+    <text x="355" y="114" fill="#ffffff" font-family="sans-serif" font-size="12">tokenize and analyze user academic intent?</text>
+
+    <!-- Message 2 (AI Response) -->
+    <rect x="225" y="145" width="460" height="175" rx="12" fill="#1b152d" stroke="#3d2f5e" stroke-width="1"/>
+    <circle cx="250" cy="170" r="11" fill="url(#accent1)"/>
+    <text x="250" y="174" fill="#ffffff" font-family="sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">AI</text>
+    <text x="272" y="174" fill="#ff8fa8" font-family="sans-serif" font-size="11.5" font-weight="700">EduAssist NLP System</text>
+    
+    <text x="245" y="202" fill="#ded9ee" font-family="sans-serif" font-size="11.5">1. <tspan fill="#ffffff" font-weight="600">Tokenization &amp; Lemmatization:</tspan> Breaks raw queries into root tokens.</text>
+    <text x="245" y="224" fill="#ded9ee" font-family="sans-serif" font-size="11.5">2. <tspan fill="#ffffff" font-weight="600">Intent Classification:</tspan> Maps questions to curriculum syllabus.</text>
+    <text x="245" y="246" fill="#ded9ee" font-family="sans-serif" font-size="11.5">3. <tspan fill="#ffffff" font-weight="600">Contextual Response:</tspan> Generates personalized academic solutions.</text>
+    <text x="245" y="272" fill="#9e94bc" font-family="sans-serif" font-size="11">✓ Instant tailored support for exams, assignments &amp; conceptual doubts.</text>
+    <text x="245" y="295" fill="#27c93f" font-family="sans-serif" font-size="10.5" font-weight="600">⚡ Response generated in 0.12s • Scalable REST API architecture</text>
+
+    <!-- Chat Input Box -->
+    <rect x="225" y="345" width="460" height="55" rx="10" fill="#110d1f" stroke="#33284f" stroke-width="1.2"/>
+    <text x="245" y="378" fill="#665b82" font-family="sans-serif" font-size="12">Type an assignment topic or concept query...</text>
+    <rect x="635" y="355" width="38" height="34" rx="6" fill="url(#accent1)"/>
+    <path d="M650 372 L658 372 M655 368 L659 372 L655 376" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
