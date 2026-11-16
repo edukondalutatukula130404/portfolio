@@ -346,6 +346,7 @@ button {
   vertical-align: bottom;
   object-fit: contain;
   object-position: bottom;
+  image-rendering: -webkit-optimize-contrast;
   filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.12));
   transition: transform 0.4s ease;
 }
@@ -966,8 +967,8 @@ button {
 .author-pill {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 16px 6px 6px;
+  gap: 12px;
+  padding: 5px 18px 5px 6px;
   border-radius: var(--radius-pill);
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -975,11 +976,17 @@ button {
 }
 
 .author-avatar {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   background: #111;
+  flex-shrink: 0;
+  image-rendering: -webkit-optimize-contrast;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
 .author-name {
