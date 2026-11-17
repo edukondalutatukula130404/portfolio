@@ -172,11 +172,13 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const filterValue = btn.getAttribute('data-filter');
+      let delay = 0;
       projectCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (filterValue === 'all' || cardCategory === filterValue) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.35s ease';
+          card.style.animation = `cardReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s both`;
+          delay += 0.05;
         } else {
           card.style.display = 'none';
         }
