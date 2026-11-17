@@ -679,6 +679,8 @@ html.dark-theme .btn-download-resume:hover,
    ========================================= */
 .showcase-section-heading {
   margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 2;
 }
@@ -952,6 +954,11 @@ html.dark-theme .btn-download-resume:hover,
 }
 
 /* Light Theme Overrides for Showcase Stack */
+html:not(.dark-theme) .showcase-section-heading,
+[data-theme="light"] .showcase-section-heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 html:not(.dark-theme) .showcase-title,
 [data-theme="light"] .showcase-title {
   color: #111827;
