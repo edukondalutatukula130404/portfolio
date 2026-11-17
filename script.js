@@ -345,28 +345,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Guarantee all Live Preview & Demo direct buttons open target sites reliably
-  document.querySelectorAll('.card-action-btn.live-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Prevent card click when clicking action buttons
+  document.querySelectorAll('.card-links-row a, .card-links-row button').forEach(el => {
+    el.addEventListener('click', (e) => {
       e.stopPropagation();
-      const href = btn.getAttribute('href');
-      if (href && href !== '#') {
-        e.preventDefault();
-        window.open(href, '_blank', 'noopener,noreferrer');
-      }
     });
   });
-
-  // Guarantee modal Live Link opens target sites reliably
-  if (modalLiveLink) {
-    modalLiveLink.addEventListener('click', (e) => {
-      const href = modalLiveLink.getAttribute('href');
-      if (href && href !== '#') {
-        e.preventDefault();
-        window.open(href, '_blank', 'noopener,noreferrer');
-      }
-    });
-  }
 
   // Helper for Email Validation
   function isValidEmail(email) {
