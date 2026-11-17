@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edukondalu Tatukula | Full-Stack Developer</title>
   <meta name="description" content="Portfolio of Edukondalu Tatukula - Full-Stack Developer specializing in MERN Stack, React, Node.js, Python, and scalable digital solutions.">
-  <link rel="stylesheet" href="styles.css?v=6.0">
+  <link rel="stylesheet" href="styles.css?v=6.2">
 </head>
 <body class="dark-theme">
 
@@ -870,111 +870,157 @@
     </div>
   </footer>
 
-  <!-- ================= PROJECT CASE STUDY MODAL ================= -->
-  <!-- Exact Match to Video Frames 00:16 - 00:19 -->
+  <!-- ================= PROJECT DETAILS / CASE STUDY PAGE ================= -->
+  <!-- Matches Charan Teja Case Study Layout -->
   <div class="case-study-modal" id="caseStudyModal">
-    <!-- Sticky Top Header -->
-    <div class="modal-header-nav">
-      <div class="container modal-nav-row">
-        <button class="btn-back-pill" id="modalBackBtn">
-          <span>← Back</span>
+    <!-- Ambient Corner Glows -->
+    <div class="cs-ambient-glow cs-glow-tr"></div>
+    <div class="cs-ambient-glow cs-glow-bl"></div>
+
+    <!-- Sticky Top Navigation Bar -->
+    <div class="cs-topbar">
+      <div class="cs-topbar-inner">
+        <button type="button" class="cs-back-btn" id="modalBackBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Home</span>
         </button>
-        <div class="availability-pill">
-          <span class="status-dot"></span>
-          <span>Available for New Project</span>
-        </div>
+        <span class="cs-topbar-tag">Case Study</span>
       </div>
     </div>
 
-    <!-- Modal Content -->
-    <div class="container case-study-body">
-      <!-- Meta Badges -->
-      <div class="case-study-meta-row">
-        <span class="meta-pill" id="modalTagline">NLP &amp; Python</span>
-        <span class="meta-pill" id="modalAuthor">University Project</span>
-        <span class="meta-pill highlight">/Real Project</span>
+    <!-- Scrollable Content Container -->
+    <div class="cs-container">
+
+      <!-- Section: Overview -->
+      <section id="cs-overview" class="cs-section cs-overview">
+        <div class="cs-header-group">
+          <span class="cs-badge-mono">Case Study</span>
+          <h1 class="cs-title" id="csTitle">AI EDUCATIONAL CHATBOT</h1>
+          <p class="cs-subtitle" id="csSubtitle">24/7 ACADEMIC ASSISTANCE &amp; NLP PIPELINE</p>
+        </div>
+
+        <!-- Large Hero Mockup Display Frame with Glow -->
+        <div class="cs-hero-frame-wrap">
+          <div class="cs-hero-glow"></div>
+          <div class="cs-hero-frame">
+            <img id="csHeroImg" src="assets/showcase-chatbot.jpg" alt="Project Showcase" class="cs-hero-img">
+          </div>
+        </div>
+
+        <!-- Description & Action Links -->
+        <div class="cs-overview-details">
+          <p class="cs-lead-desc" id="csDesc">
+            Designed and implemented an AI-powered conversational chatbot engineered with Natural Language Processing (NLP) techniques, custom intent classifiers, and real-time query resolution to provide instantaneous 24/7 academic support for students.
+          </p>
+          <div class="cs-actions-row">
+            <a id="csGitBtn" href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-repo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>View Repository</span>
+            </a>
+            <a id="csLiveBtn" href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-live">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Live Application</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sub-Navigation Quick Jump Pills -->
+      <div class="cs-subnav-row">
+        <button type="button" class="cs-subnav-pill" onclick="window.scrollToCaseStudySection('cs-workflow')">How It Works</button>
+        <button type="button" class="cs-subnav-pill" onclick="window.scrollToCaseStudySection('cs-features')">App Features</button>
+        <button type="button" class="cs-subnav-pill" onclick="window.scrollToCaseStudySection('cs-tech')">Technologies</button>
+        <button type="button" class="cs-subnav-pill" onclick="window.scrollToCaseStudySection('cs-architecture')">Architecture</button>
       </div>
 
-      <!-- Title & Lead -->
-      <h1 class="case-study-title" id="modalTitle">AI-Based Chatbot for Educational Systems</h1>
-      <p class="case-study-lead" id="modalLead">
-        Designed and implemented an AI-powered chatbot for educational systems to provide real-time academic assistance to students using NLP.
-      </p>
+      <!-- Section: How It Works -->
+      <section id="cs-workflow" class="cs-section">
+        <div class="cs-section-header">
+          <h3 class="cs-sec-title">How It Works</h3>
+          <div class="cs-sec-pill-bar"></div>
+          <p class="cs-sec-subtitle" id="csWorkflowSub">
+            Streamlined workflow from user interaction and intent evaluation to verified response delivery.
+          </p>
+        </div>
+        <div class="cs-workflow-wrap">
+          <div class="cs-workflow-connector"></div>
+          <div class="cs-steps-grid" id="csStepsGrid">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </section>
 
-      <!-- Action Buttons -->
-      <div class="case-study-actions">
-        <a href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="btn-live-preview" id="modalLiveLink">
-          <span>Live Demo ↗</span>
-        </a>
-        <a href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="btn-github-preview" id="modalGitLink">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+      <!-- Section: App Features -->
+      <section id="cs-features" class="cs-section">
+        <div class="cs-section-header">
+          <h3 class="cs-sec-title">App Features</h3>
+          <div class="cs-sec-pill-bar"></div>
+          <p class="cs-sec-subtitle" id="csFeaturesSub">
+            Explore core capabilities designed for real-time responsiveness, modular architecture, and high throughput.
+          </p>
+        </div>
+        <div class="cs-features-grid" id="csFeaturesGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- Section: Technologies We Use -->
+      <section id="cs-tech" class="cs-section">
+        <div class="cs-section-header">
+          <h3 class="cs-sec-title">Technologies We Use</h3>
+          <div class="cs-sec-pill-bar"></div>
+          <p class="cs-sec-subtitle" id="csTechSub">
+            Built using a robust blend of modern frontend frameworks, scalable backends, and cloud databases.
+          </p>
+        </div>
+        <div class="cs-tech-grid" id="csTechGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- Section: System Architecture -->
+      <section id="cs-architecture" class="cs-section">
+        <div class="cs-section-header text-left" style="align-items: flex-start; text-align: left;">
+          <h3 class="cs-sec-title">System Architecture</h3>
+          <div class="cs-sec-pill-bar" style="margin-left: 0;"></div>
+        </div>
+        <div class="cs-arch-card" id="csArchCard">
+          <!-- Divided rows populated dynamically via JS -->
+        </div>
+        <div class="cs-arch-pills" id="csArchPills">
+          <!-- Stack pills populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- Up Next Project Navigation -->
+      <div class="cs-next-wrap" id="csNextWrap">
+        <p class="cs-next-label">Up Next</p>
+        <div class="cs-next-card" id="csNextCard">
+          <div>
+            <h4 class="cs-next-title" id="csNextTitle">SPESHWAY MULTI-VENDOR E-COMMERCE</h4>
+            <p class="cs-next-subtitle" id="csNextSubtitle">ENTERPRISE MULTI-VENDOR COMMERCE PLATFORM</p>
+          </div>
+          <svg class="cs-next-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
           </svg>
-          <span>GitHub Repo ↗</span>
-        </a>
-        <button class="btn-contact-outline trigger-contact">
-          <span>Contact Me</span>
-        </button>
-      </div>
-
-      <!-- Large Showcase Visual -->
-      <div class="case-study-hero-img-wrap">
-        <img src="assets/project-chatbot.svg" alt="Project Showcase" class="case-study-hero-img" id="modalHeroImg">
-      </div>
-
-      <!-- Highlight Quote Box (Frame 00:18) -->
-      <div class="case-study-quote-box">
-        <p class="case-study-quote-text" id="modalQuote">
-          “Designed and implemented an AI-powered chatbot for educational systems to provide real-time academic assistance to students. Used Natural Language Processing (NLP) techniques to analyze user input and generate accurate responses.”
-        </p>
-      </div>
-
-      <!-- Real Outcomes & Measurable Results Banner -->
-      <div class="cs-metrics-banner">
-        <span class="cs-metrics-badge">⚡ Real Project Outcomes &amp; Metrics</span>
-        <p class="cs-metrics-text" id="modalMetricsText">&lt;120ms Latency • 92%+ Intent Classification Accuracy • 24/7 Automated Availability</p>
-      </div>
-
-      <!-- Problem & Individual Contribution Dual Cards -->
-      <div class="cs-details-dual-grid">
-        <div class="cs-detail-box">
-          <h4 class="cs-detail-heading">
-            <span class="cs-detail-icon">🎯</span> What Problem It Solves
-          </h4>
-          <p class="cs-detail-text" id="modalProblemText">
-            Students often face delays getting answers to routine academic queries (exam schedules, syllabus doubts, grading policies, and resource locations) outside classroom hours, overwhelming faculty and leaving students waiting.
-          </p>
-        </div>
-        <div class="cs-detail-box">
-          <h4 class="cs-detail-heading">
-            <span class="cs-detail-icon">💼</span> My Individual Contribution
-          </h4>
-          <p class="cs-detail-text" id="modalContributionText">
-            Engineered core NLP intent-matching algorithms, built conversational decision trees, designed responsive interactive chat widget interface, and developed Python Flask API endpoints for real-time inference.
-          </p>
         </div>
       </div>
 
-      <!-- Features Grid -->
-      <div class="case-study-features-grid" id="modalFeatures">
-        <!-- Dynamically populated via JS -->
+      <!-- Bottom Back to Projects Button -->
+      <div class="cs-bottom-bar">
+        <button type="button" class="cs-btn-bottom-back" id="csBottomBackBtn">Back to Projects</button>
       </div>
 
-      <!-- Technologies Pills -->
-      <div style="margin-bottom: 50px;">
-        <h4 style="font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; text-transform: uppercase;">Technologies &amp; Architecture:</h4>
-        <div class="case-study-meta-row" id="modalTechPills">
-          <!-- Dynamically populated via JS -->
-        </div>
-      </div>
-
-      <!-- /MORE WORK Section (Frame 00:19) -->
-      <div class="modal-more-work">
-        <h3 class="more-work-title">/MORE WORK</h3>
-        <div class="projects-grid" id="modalMoreWorkGrid">
-          <!-- Dynamically populated via JS -->
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1052,7 +1098,7 @@
   <div class="custom-cursor-ring" id="customCursorRing" aria-hidden="true"></div>
   <div class="custom-cursor-dot" id="customCursorDot" aria-hidden="true"></div>
 
-  <script src="script.js?v=6.0"></script>
+  <script src="script.js?v=6.2"></script>
 </body>
 </html>
 

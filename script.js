@@ -7,197 +7,247 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'chatbot',
       category: 'ai',
       badge: 'AI & NLP',
-      tagline: 'AI-Based Chatbot for Educational Systems',
-      subtitle: 'Natural Language Processing',
-      author: 'Autonomous AI Project',
-      liveUrl: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
-      githubUrl: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
-      tech: ['Python', 'Natural Language Processing', 'NLTK', 'Flask REST API', 'JavaScript', 'HTML5/CSS3'],
-      image: 'assets/showcase-chatbot.jpg',
+      name: 'AI EDUCATIONAL CHATBOT',
+      subtitle: '24/7 ACADEMIC ASSISTANCE & NLP PIPELINE',
       fullTitle: 'AI-Based Chatbot for Educational Systems',
       leadDescription: 'Designed and implemented an AI-powered conversational chatbot engineered with Natural Language Processing (NLP) techniques, custom intent classifiers, and real-time query resolution to provide instantaneous 24/7 academic support for students.',
-      quote: '“Designed and implemented an AI-powered chatbot for educational systems to provide real-time academic assistance to students. Used Natural Language Processing (NLP) techniques to analyze user input and generate accurate responses.”',
-      problemSolved: 'Students face substantial delays receiving answers to routine curriculum, exam schedule, syllabus, and grading queries outside classroom hours, causing academic friction and placing repetitive administrative burdens on teaching staff.',
-      contribution: 'Engineered the NLP preprocessing pipeline (tokenization, lemmatization, stop-word elimination), implemented intent matching algorithms with confidence scoring, built responsive floating chat UI components, and integrated Flask REST endpoints for sub-120ms response generation.',
-      features: [
-        {
-          title: 'Natural Language Processing & Intent Matching',
-          desc: 'Tokenizes and evaluates varied student phrasings using customized NLP classification models to yield precise, context-aware answers.'
-        },
-        {
-          title: 'Interactive Web-Based Chat Experience',
-          desc: 'Sleek, responsive chat interface featuring typing indicators, prompt suggestion chips, message history, and auto-scroll.'
-        },
-        {
-          title: 'Real-Time Flask API & Knowledge Engine',
-          desc: 'Lightweight Python microservice handling academic FAQs, examination schedules, syllabus details, and course reference materials.'
-        }
+      description: 'An AI-powered conversational chatbot engineered with Natural Language Processing (NLP) techniques, custom intent classifiers, and real-time query resolution to provide instantaneous 24/7 academic support for students.',
+      image: 'assets/showcase-chatbot.jpg',
+      githubUrl: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
+      liveUrl: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
+      github: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
+      live: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
+      workflowSubtitle: 'From natural query tokenization to sub-120ms verified academic response generation.',
+      workflows: [
+        { step: '01', title: 'Query Tokenization', text: 'Breaks raw natural language queries into root tokens, eliminates noise words, and normalizes input text.' },
+        { step: '02', title: 'Intent Classification', text: 'Maps normalized student queries against academic syllabus, exam schedules, and FAQs with confidence scoring.' },
+        { step: '03', title: 'Solution Retrieval', text: 'Fetches verified syllabus details, formula references, and curriculum guidelines with contextual awareness.' },
+        { step: '04', title: 'Instant Response', text: 'Dispatches sub-120ms conversational answers to the client interface with interactive follow-up suggestion chips.' }
       ],
-      metrics: '<120ms Response Time • 92%+ Intent Accuracy • 24/7 Automated Availability'
+      featuresSubtitle: 'Explore core capabilities designed for real-time conversational assistance, NLP intent parsing, and instant query resolution.',
+      features: [
+        { icon: 'brain', title: 'Natural Language Processing', desc: 'Tokenizes and evaluates varied student phrasings using customized NLP classification models for accurate, context-aware answers.' },
+        { icon: 'message', title: 'Interactive Chat Experience', desc: 'Sleek, responsive chat interface featuring typing indicators, prompt suggestion chips, message history, and auto-scroll.' },
+        { icon: 'server', title: 'Real-Time Flask API Engine', desc: 'Lightweight Python microservice handling academic FAQs, examination schedules, syllabus details, and course reference materials.' },
+        { icon: 'shield', title: 'Intelligent Fallback System', desc: 'Automatically flags low-confidence or ambiguous queries and suggests verified faculty advisory contact channels.' }
+      ],
+      techSubtitle: 'Our application is built using a powerful blend of NLP processing pipelines, lightweight Flask microservices, and reactive JavaScript UI.',
+      stack: ['Python', 'NLP', 'NLTK', 'Flask API', 'JavaScript', 'HTML5', 'CSS3', 'REST API'],
+      tech: ['Python', 'Natural Language Processing', 'NLTK', 'Flask REST API', 'JavaScript', 'HTML5/CSS3'],
+      architecture: 'Engineered with a modular Python Flask backend serving high-throughput RESTful endpoints. Utilizes NLTK pipeline for tokenization, lemmatization, and bag-of-words classification with 92%+ intent precision. Integrates responsive vanilla JavaScript client widget with asynchronous AJAX streaming and sub-120ms latency.'
     },
     {
       id: 'ecom',
       category: 'ecom',
       badge: 'REAL PROJECT',
-      tagline: 'Speshway Multi-Vendor E-Commerce Platform',
-      subtitle: 'ecom.speshway.site',
-      author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://ecom.speshway.site',
-      githubUrl: 'https://github.com/edukondalutatukula130404/E_commerce.git',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Razorpay', 'REST APIs', 'Tailwind CSS'],
-      image: 'assets/showcase-ecommerce.jpg?v=2',
+      name: 'SPESHWAY MULTI-VENDOR E-COMMERCE',
+      subtitle: 'ENTERPRISE MULTI-VENDOR COMMERCE PLATFORM',
       fullTitle: 'Speshway Multi-Vendor E-Commerce Platform',
       leadDescription: 'A production-grade, multi-vendor e-commerce web platform engineered with high-speed catalog browsing, real-time cart state synchronization, secure payment gateway integration, and comprehensive customer & order management.',
-      quote: '“Architected and deployed ecom.speshway.site, delivering an intuitive shopping experience with dynamic facet search, real-time inventory management, and end-to-end checkout with automated notifications.”',
-      problemSolved: 'Independent retailers and vendors lacked a centralized, high-speed digital storefront to manage distributed inventories, process secure multi-vendor payments, and track fulfillment without paying prohibitive SaaS subscription fees.',
-      contribution: 'Built product catalog query APIs with dynamic multi-facet filtering, implemented Redux Toolkit persistent shopping cart, integrated Razorpay payment gateway with cryptographic webhook verification, and engineered vendor order management dashboards.',
-      features: [
-        {
-          title: 'Product Catalog & Dynamic Filtering',
-          desc: 'Engineered high-speed faceted product search by category, price ranges, brand, and customer ratings with instant client-side state updates.'
-        },
-        {
-          title: 'Cart, Checkout & Payment Gateway',
-          desc: 'Integrated Redux persistent cart management, discount coupon validation, and multi-mode payment gateway for seamless, secure transactions.'
-        },
-        {
-          title: 'Vendor Portal & Order Management',
-          desc: 'Built administrative dashboards for order status tracking, inventory stock alerts, customer dispute handling, and automated invoice delivery.'
-        }
+      description: 'A production-grade, multi-vendor e-commerce web platform engineered with high-speed catalog browsing, real-time cart state synchronization, secure payment gateway integration, and comprehensive customer & order management.',
+      image: 'assets/showcase-ecommerce.jpg?v=2',
+      githubUrl: 'https://github.com/edukondalutatukula130404/E_commerce.git',
+      liveUrl: 'https://ecom.speshway.site',
+      github: 'https://github.com/edukondalutatukula130404/E_commerce.git',
+      live: 'https://ecom.speshway.site',
+      workflowSubtitle: 'Seamless commerce pipeline from product discovery and cart synchronization to secure online payment and doorstep dispatch.',
+      workflows: [
+        { step: '01', title: 'Catalog Discovery', text: 'Browse thousands of products with multi-facet category filters, search autocomplete, and price ranges.' },
+        { step: '02', title: 'Persistent Cart & State', text: 'Synchronize shopping cart across tabs via Redux Toolkit with automated promo code validation.' },
+        { step: '03', title: 'Secure Razorpay Checkout', text: 'Execute fast online payments through Razorpay gateway with cryptographic HMAC webhook verification.' },
+        { step: '04', title: 'Fulfillment & Dispatch', text: 'Generate automated tax invoices, send SMS/email confirmations, and track parcel fulfillment live.' }
       ],
-      metrics: '99.9% Platform Uptime • <180ms Response Latency • Real-Time Inventory Sync'
+      featuresSubtitle: 'Explore powerful commerce tools designed to browse catalogues, manage distributed inventories, and process secure payments.',
+      features: [
+        { icon: 'search', title: 'Faceted Catalog Search', desc: 'Engineered high-speed faceted product search by category, price ranges, brand, and customer ratings with instant client-side state updates.' },
+        { icon: 'cart', title: 'Persistent Shopping Cart', desc: 'Redux-driven state persistence keeping items saved across browser sessions and authenticated customer devices.' },
+        { icon: 'card', title: 'Razorpay Gateway Integration', desc: 'End-to-end encrypted checkout supporting UPI, Credit/Debit cards, Net Banking, and instant payment receipts.' },
+        { icon: 'dashboard', title: 'Vendor Management Portal', desc: 'Built administrative dashboards for order status tracking, inventory stock alerts, customer dispute handling, and automated invoice delivery.' }
+      ],
+      techSubtitle: 'Our application is built using a scalable blend of full-stack MERN services, Redux state management, and cloud database clusters.',
+      stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux Toolkit', 'Razorpay', 'Tailwind CSS', 'JWT Auth'],
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Razorpay', 'REST APIs', 'Tailwind CSS'],
+      architecture: 'Built on full MERN stack (MongoDB, Express, React, Node.js) with Redux Toolkit for centralized client state. Employs RESTful APIs with JWT authentication and bcrypt password hashing. MongoDB Atlas cluster with indexed query paths ensures sub-100ms response times under high concurrency.'
     },
     {
       id: 'clothing',
-      category: 'ecom',
+      category: 'clothing',
       badge: 'REAL PROJECT',
-      tagline: 'Speshway Fashion & Apparel E-Store',
-      subtitle: 'clothing.speshway.site',
-      author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://clothing.speshway.site',
-      githubUrl: 'https://github.com/edukondalutatukula130404/vexa-style-hub.git',
-      tech: ['HTML5/CSS3', 'JavaScript', 'Cart Engine', 'Lookbook UI', 'Responsive Design', 'SEO'],
-      image: 'assets/showcase-clothing.jpg?v=2',
+      name: 'SPESHWAY FASHION STORE (VEXA)',
+      subtitle: 'DIGITAL APPAREL & TRENDING BOUTIQUE',
       fullTitle: 'Speshway Clothing & Apparel Storefront',
-      leadDescription: 'A high-conversion fashion e-commerce storefront crafted with editorial typography, interactive lookbooks, visual size and color variant selectors, and a fluid slide-over mini-cart drawer.',
-      quote: '“Engineered clothing.speshway.site to offer an immersive, visual-first fashion shopping experience with smooth animations, instant size selectors, and zero-friction cart interactions.”',
-      problemSolved: 'Apparel buyers on mobile devices regularly abandon sluggish websites with complex checkout flows, slow image carousels, and poorly adapted mobile screen controls.',
-      contribution: 'Crafted a visual-first editorial layout with optimized media delivery, built a vanilla JavaScript slide-over cart drawer with persistent local storage, and tuned the critical rendering path for sub-second page loads.',
-      features: [
-        {
-          title: 'Editorial Lookbook & Gallery',
-          desc: 'Showcases curated seasonal collections with high-resolution image zoom, interactive lifestyle sliders, and hover-triggered quick previews.'
-        },
-        {
-          title: 'Interactive Slide-Over Mini-Cart',
-          desc: 'Slide-out cart drawer enabling frictionless quantity updates, promo code applications, and one-click progression to checkout.'
-        },
-        {
-          title: 'Mobile-First Fluid Responsive Architecture',
-          desc: 'Optimized for mobile shoppers with touch gestures, sticky navigation bars, sub-second load times, and structured SEO product schemas.'
-        }
+      leadDescription: 'An elegant, high-conversion online fashion storefront featuring dynamic category carousels, responsive lookbook galleries, real-time size & inventory pickers, and smooth checkout.',
+      description: 'An elegant, high-conversion online fashion storefront featuring dynamic category carousels, responsive lookbook galleries, real-time size & inventory pickers, and smooth checkout.',
+      image: 'assets/showcase-clothing.jpg?v=2',
+      githubUrl: 'https://github.com/edukondalutatukula130404/clothing_web.git',
+      liveUrl: 'https://clothing.speshway.site',
+      github: 'https://github.com/edukondalutatukula130404/clothing_web.git',
+      live: 'https://clothing.speshway.site',
+      workflowSubtitle: 'Effortless style journey from trend curation and size selection to express checkout and live dispatch tracking.',
+      workflows: [
+        { step: '01', title: 'Lookbook Curation', text: 'Explore curated modern apparel collections, trending styles, and model lookbook galleries.' },
+        { step: '02', title: 'Size & Fit Selection', text: 'Select fit, color swatches, and size dimensions with dynamic stock availability checking.' },
+        { step: '03', title: 'Express Checkout', text: 'Frictionless customer checkout with saved addresses, coupon discounts, and instant payment validation.' },
+        { step: '04', title: 'Delivery & Updates', text: 'Instant order confirmation vouchers and dispatch tracking sent via email and customer account panel.' }
       ],
-      metrics: '100% Mobile Responsive • Sub-Second Load Time • Optimized Conversion UI'
+      featuresSubtitle: 'Explore tailored boutique features engineered for visual appeal, responsive device ergonomics, and high conversion rates.',
+      features: [
+        { icon: 'sparkles', title: 'Curated Lookbook Displays', desc: 'High-resolution image showcases with responsive zoom, variant selectors, and fashion styling recommendations.' },
+        { icon: 'layers', title: 'Smart Size & Swatches', desc: 'Instant visual feedback on garment stock availability per size and color shade before cart addition.' },
+        { icon: 'cart', title: 'Frictionless One-Page Checkout', desc: 'Streamlined 3-step ordering process reducing cart abandonment with address autofill and promo coupons.' },
+        { icon: 'mobile', title: 'Mobile-First Ergonomics', desc: 'Tailored mobile ergonomics with fluid bottom sheets, touch swiping, and delightful micro-interactions.' }
+      ],
+      techSubtitle: 'Our application is built using a modern blend of React frontend components, Node.js APIs, and CDN asset delivery.',
+      stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'CSS3', 'REST API', 'Razorpay', 'Cloudinary'],
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Razorpay API', 'RESTful API', 'CSS Grid'],
+      architecture: 'Architected with React.js frontend and Node.js/Express REST backend. Utilizes Cloudinary CDN for adaptive image compression and responsive delivery. Integrated with MongoDB for catalog metadata and Razorpay for payment orchestration.'
     },
     {
       id: 'erp',
-      category: 'enterprise',
+      category: 'erp',
       badge: 'ENTERPRISE',
-      tagline: 'Speshway All-in-One Cloud ERP System',
-      subtitle: 'erp.speshway.site',
-      author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://erp.speshway.site',
-      githubUrl: 'https://github.com/naveen3831/Speshway-All-In-One-ERP.git',
-      tech: ['PostgreSQL', 'Node.js', 'Python', 'RBAC Security', 'Financial Invoicing', 'Inventory Engine'],
-      image: 'assets/showcase-erp.jpg',
+      name: 'SPESHWAY CLOUD ERP SYSTEM',
+      subtitle: 'ENTERPRISE RESOURCE PLANNING & ANALYTICS',
       fullTitle: 'Speshway All-in-One Cloud ERP System',
-      leadDescription: 'Comprehensive enterprise management platform engineered to automate company-wide workflows: inventory tracking, warehouse logistics, GST-compliant invoicing, HR attendance, and executive financial reporting.',
-      quote: '“Designed and engineered erp.speshway.site to centralize business operations, providing multi-tenant security, granular role-based authorization, and real-time ledger accounting.”',
-      problemSolved: 'Operational silos, manual Excel entry, and inventory discrepancies between warehouse hubs led to stock-outs, delayed tax filings, and lack of enterprise accountability.',
-      contribution: 'Designed normalized 3NF PostgreSQL database schemas, built JWT role-based access control (RBAC) middleware for multi-level staffing, developed automated GST tax computation modules, and created audit-trail ledger logging.',
-      features: [
-        {
-          title: 'Multi-Warehouse Inventory & Supply Chain',
-          desc: 'Real-time stock level monitoring across distributed warehouses, automated replenishment alerts, supplier PO tracking, and barcode integration.'
-        },
-        {
-          title: 'GST-Compliant Billing & Invoicing Engine',
-          desc: 'Automated invoice generation, tax computation, recurring billing schedules, payment status tracking, and downloadable financial audit reports.'
-        },
-        {
-          title: 'Role-Based Access Control (RBAC) & Audit Log',
-          desc: 'Fine-grained permissions for Admins, Managers, and Staff with cryptographically signed activity trails ensuring strict enterprise compliance.'
-        }
+      leadDescription: 'A centralized cloud-based enterprise resource planning platform engineered to unify multi-branch inventory, supply chain logistics, staff payroll, and financial operations.',
+      description: 'A centralized cloud-based enterprise resource planning platform engineered to unify multi-branch inventory, supply chain logistics, staff payroll, and financial operations.',
+      image: 'assets/showcase-erp.jpg',
+      githubUrl: 'https://github.com/edukondalutatukula130404/all_in_one_erp_project.git',
+      liveUrl: 'https://erp.speshway.site',
+      github: 'https://github.com/edukondalutatukula130404/all_in_one_erp_project.git',
+      live: 'https://erp.speshway.site',
+      workflowSubtitle: 'Robust enterprise operations pipeline from role-based authentication and stock management to automated tax invoicing and analytics.',
+      workflows: [
+        { step: '01', title: 'Role-Based Access', text: 'Multi-tier access permissions for executives, department heads, accountants, and warehouse managers.' },
+        { step: '02', title: 'Inventory Automation', text: 'Real-time tracking of multi-location warehouse stock with automated low-stock vendor purchase requisitions.' },
+        { step: '03', title: 'GST Billing Engine', text: 'Instant automated tax invoice generation with dual-entry accounting and ledger reconciliation.' },
+        { step: '04', title: 'Executive Analytics', text: 'Real-time revenue charts, profit & loss statements, and department efficiency metrics.' }
       ],
-      metrics: '10,000+ Operations/Day • 100% Audit Integrity • 99.98% Service Reliability'
-    },
-    {
-      id: 'desktop-app',
-      category: 'desktop',
-      badge: 'DESKTOP APP',
-      tagline: 'InvoicePro Desktop Application Suite',
-      subtitle: 'InvoicePro Desktop',
-      author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://github.com/edukondalutatukula130404',
-      githubUrl: 'https://github.com/edukondalutatukula130404',
-      tech: ['Electron', 'React', 'Node.js', 'MongoDB', 'NSIS Installer', 'Offline-First'],
-      image: 'assets/showcase-desktop.jpg',
-      fullTitle: 'InvoicePro Desktop Application Suite',
-      leadDescription: 'A production cross-platform desktop application built with Electron, React, Node.js, and persistent local MongoDB storage for offline-first enterprise invoice generation, client billing, license authentication, and automated financial reporting.',
-      quote: '“Engineered the InvoicePro Desktop Application with robust Electron architecture, persistent local MongoDB synchronization, automated NSIS installers, and cryptographic licensing.”',
-      problemSolved: 'Retail and wholesale billing points in areas with inconsistent internet connections could not risk billing disruptions or store sensitive financial transaction ledgers on third-party public clouds.',
-      contribution: 'Architected Electron IPC bridge between Node backend and React frontend, embedded a local MongoDB instance with automatic data indexing, implemented cryptographic machine-fingerprint licensing, and authored the NSIS Windows installer script.',
+      featuresSubtitle: 'Explore enterprise ERP modules designed to streamline business workflows, automate accounting, and provide real-time visibility.',
       features: [
-        {
-          title: 'Cross-Platform Electron & React Core',
-          desc: 'High-performance desktop user interface built with React components, native OS window controls, and optimized background process management.'
-        },
-        {
-          title: 'Offline-First Persistent Local MongoDB',
-          desc: 'Embedded local MongoDB instance ensuring zero-latency data persistence, instant offline access, and automatic background cloud synchronization.'
-        },
-        {
-          title: 'Automated NSIS Windows Installer & Licensing',
-          desc: 'Custom build pipeline with electron-builder producing lightweight Windows NSIS installers and cryptographic license key authentication.'
-        }
+        { icon: 'package', title: 'Multi-Warehouse Tracking', desc: 'Centralized stock movement tracking across physical depots with barcode serialization and batch numbers.' },
+        { icon: 'invoice', title: 'Automated GST Invoicing', desc: 'Pre-configured tax slabs (CGST, SGST, IGST) with automated calculations, PDF generation, and thermal printing.' },
+        { icon: 'lock', title: 'Role-Based Access Control', desc: 'Strict permission matrices ensuring sensitive financial ledgers and payroll data are accessible only to authorized roles.' },
+        { icon: 'chart', title: 'Real-Time KPI Dashboards', desc: 'Executive dashboards visualizing weekly revenue, cash flow trends, and sales rep performance KPIs.' }
       ],
-      metrics: 'Zero-Latency Offline Mode • Windows NSIS Installer • 100% Local Data Privacy'
+      techSubtitle: 'Our application is built using a resilient blend of Node.js services, MongoDB transactions, and reactive analytical charts.',
+      stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'JWT Auth', 'Chart.js', 'PDFKit'],
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Auth', 'REST APIs', 'Chart.js'],
+      architecture: 'Engineered using a multi-tenant micro-architecture with Node.js and Express. MongoDB replica sets provide high-availability transaction records with ACID-compliant multi-document transactions for critical billing pipelines. Frontend built with React, Redux, and Chart.js for data visualization.'
     },
     {
       id: 'vexa',
       category: 'mobile',
       badge: 'MOBILE APP',
-      tagline: 'Vexa Smart Mobile Application',
-      subtitle: 'iOS & Android App',
-      author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://speshway.com',
-      githubUrl: 'https://github.com/edukondalutatukula130404',
-      tech: ['Flutter', 'Dart', 'React Native', 'Firebase', 'Push Notifications', 'Offline SQLite'],
-      image: 'assets/showcase-mobile.jpg',
+      name: 'VEXA SMART MOBILE APPLICATION',
+      subtitle: 'CROSS-PLATFORM FLUTTER SHOPPING APP',
       fullTitle: 'Vexa Smart Mobile Application (iOS & Android)',
-      leadDescription: 'A production mobile application engineered for iOS and Android platforms, featuring biometric authentication, reactive state management, offline database caching, and real-time cloud notifications.',
-      quote: '“Engineered the Vexa Mobile Application with clean modular architecture, achieving native 60fps transitions, reliable offline caching, and frictionless user journeys.”',
-      problemSolved: 'Mobile end users required a seamless, battery-efficient mobile application capable of operating smoothly during poor cell reception while guaranteeing secure biometric protection for sensitive credentials.',
-      contribution: 'Built responsive cross-platform Flutter mobile interfaces, integrated Firebase cloud messaging for low-latency notifications, developed an SQLite offline caching synchronization engine, and implemented device-native biometric authentication.',
-      features: [
-        {
-          title: 'Cross-Platform iOS & Android Experience',
-          desc: 'Engineered with shared codebase architectures delivering smooth 60fps native performance, gesture navigation, and platform-adaptive UI controls.'
-        },
-        {
-          title: 'Biometric Security & Authentication',
-          desc: 'Supports Fingerprint and FaceID biometric unlock, encrypted token storage, and secure OAuth2 session management.'
-        },
-        {
-          title: 'Real-Time Sync & Offline Caching',
-          desc: 'Offline-first database persistence that synchronizes instantly upon network recovery with low battery and network bandwidth overhead.'
-        }
+      leadDescription: 'A production-ready cross-platform mobile application engineered for iOS and Android with Flutter, delivering 60fps native transitions, biometric login, offline database caching, and push notifications.',
+      description: 'A production-ready cross-platform mobile application engineered for iOS and Android with Flutter, delivering 60fps native transitions, biometric login, offline database caching, and push notifications.',
+      image: 'assets/showcase-mobile.jpg',
+      githubUrl: 'https://github.com/edukondalutatukula130404/VEXA-Clothing-Mobile-App',
+      liveUrl: 'https://clothing.speshway.site',
+      github: 'https://github.com/edukondalutatukula130404/VEXA-Clothing-Mobile-App',
+      live: 'https://clothing.speshway.site',
+      workflowSubtitle: 'Native mobile experience from biometric authentication and gesture browsing to in-app payment and push notifications.',
+      workflows: [
+        { step: '01', title: 'Biometric Sign-In', text: 'Quick FaceID or fingerprint authentication with encrypted local keychain token storage.' },
+        { step: '02', title: 'Gesture Discovery', text: 'Browse products with 60fps animated hero transitions, pinch zoom, and pull-to-refresh.' },
+        { step: '03', title: 'Native Payment Sheet', text: 'Frictionless in-app payment sheet supporting Google Pay, Apple Pay, cards, and UPI.' },
+        { step: '04', title: 'Push Alerts', text: 'Background Firebase Cloud Messaging delivers instant order tracking and delivery dispatch alerts.' }
       ],
-      metrics: '60fps Native UI • Offline-First Architecture • iOS & Android Deployed'
+      featuresSubtitle: 'Explore native mobile capabilities engineered for smooth 60fps animations, offline resiliency, and device security.',
+      features: [
+        { icon: 'mobile', title: 'Cross-Platform Native Core', desc: 'Single high-performance codebase compiling to ARM64 native binaries on iOS and Android with 60fps fluid motion.' },
+        { icon: 'shield', title: 'Biometric Authentication', desc: 'Native biometric hardware integration for cryptographic credential authentication (FaceID & Fingerprint).' },
+        { icon: 'database', title: 'Offline SQLite Caching', desc: 'Offline-first data architecture caching catalog items locally for instant browsing without active cell service.' },
+        { icon: 'bell', title: 'Firebase Cloud Messaging', desc: 'Low-latency push notifications for flash sales, order transit updates, and back-in-stock alerts.' }
+      ],
+      techSubtitle: 'Our application is built using Flutter and Dart, backed by Firebase cloud infrastructure and native device APIs.',
+      stack: ['Flutter', 'Dart', 'Firebase', 'SQLite', 'REST APIs', 'Cloud Messaging', 'Provider State'],
+      tech: ['Flutter', 'Dart', 'React Native', 'Firebase', 'Push Notifications', 'Offline SQLite'],
+      architecture: 'Built using Flutter and Dart with Clean Architecture (Domain, Data, and Presentation layers). Leverages Provider for reactive UI updates and SQLite (sqflite) for local offline persistence. Synchronizes with Node.js backend services via secure REST APIs with automated offline sync queues.'
+    },
+    {
+      id: 'desktop-app',
+      category: 'desktop',
+      badge: 'DESKTOP APP',
+      name: 'INVOICEPRO DESKTOP APPLICATION',
+      subtitle: 'OFFLINE GST BILLING & INVENTORY SUITE',
+      fullTitle: 'InvoicePro Desktop Application Suite',
+      leadDescription: 'A high-performance offline-first desktop billing software built with Electron and React, designed for retail and wholesale billing with local embedded database, thermal printing, and barcode scanner support.',
+      description: 'A high-performance offline-first desktop billing software built with Electron and React, designed for retail and wholesale billing with local embedded database, thermal printing, and barcode scanner support.',
+      image: 'assets/showcase-desktop.jpg',
+      githubUrl: 'https://github.com/edukondalutatukula130404/Billing-Software-for-Desktop',
+      liveUrl: 'https://github.com/edukondalutatukula130404/Billing-Software-for-Desktop',
+      github: 'https://github.com/edukondalutatukula130404/Billing-Software-for-Desktop',
+      live: 'https://github.com/edukondalutatukula130404/Billing-Software-for-Desktop',
+      workflowSubtitle: 'Instant offline billing workflow from barcode scanning to automated GST tax calculation and thermal receipt printing.',
+      workflows: [
+        { step: '01', title: 'Instant Offline Launch', text: 'Runs natively on Windows without requiring internet connection or remote cloud dependencies.' },
+        { step: '02', title: 'High-Speed Barcode Scan', text: 'Instantly look up items via USB barcode scanner and populate bill lines in sub-50ms.' },
+        { step: '03', title: 'One-Click Tax Bill', text: 'Calculate GST breakdowns and trigger high-speed 58mm/80mm ESC/POS thermal or A4 laser printers.' },
+        { step: '04', title: 'Local Backup & Sync', text: 'Automated daily encrypted local database backups with optional background cloud synchronization.' }
+      ],
+      featuresSubtitle: 'Explore desktop billing capabilities built for speed, offline reliability, and native peripheral hardware integration.',
+      features: [
+        { icon: 'database', title: 'Offline Embedded MongoDB', desc: 'Zero network latency data operations powered by local embedded database ensuring 100% data privacy and uptime.' },
+        { icon: 'printer', title: 'Printer & Scanner Bridge', desc: 'Native OS integration with USB barcode scanners, cash drawers, and ESC/POS thermal receipt printers.' },
+        { icon: 'invoice', title: 'Automated GST Tax Engine', desc: 'Comprehensive GST calculations with automatic HSN code lookups, CGST/SGST/IGST tax invoices, and GSTR summaries.' },
+        { icon: 'cpu', title: 'Windows NSIS Installer', desc: 'Production electron-builder pipeline creating signed lightweight Windows installer packages with machine key licensing.' }
+      ],
+      techSubtitle: 'Our application is built using Electron desktop runtime, React user interfaces, and embedded local database storage.',
+      stack: ['Electron', 'React.js', 'Node.js', 'MongoDB Embedded', 'IPC Bridge', 'ESC/POS Drivers', 'NSIS Installer'],
+      tech: ['Electron', 'React', 'Node.js', 'Embedded MongoDB', 'Windows NSIS', 'Local Database'],
+      architecture: 'Architected with Electron IPC (Inter-Process Communication) bridge connecting a React frontend with a native Node.js process. Embeds local MongoDB for microsecond read/write operations with zero network dependency. Electron-builder automates compilation into signed Windows NSIS executable packages.'
     }
   ];
 
-  // 1. Service Accordion Toggle (Matches Frame 00:08 - 00:09)
+  // Helper: Feature SVG Icons
+  function getFeatureIcon(type) {
+    switch (type) {
+      case 'brain':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></svg>';
+      case 'message':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+      case 'server':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>';
+      case 'shield':
+      case 'lock':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>';
+      case 'search':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
+      case 'cart':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>';
+      case 'card':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>';
+      case 'dashboard':
+      case 'chart':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>';
+      case 'sparkles':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>';
+      case 'layers':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>';
+      case 'mobile':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>';
+      case 'package':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>';
+      case 'invoice':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>';
+      case 'database':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>';
+      case 'bell':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>';
+      case 'printer':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
+      case 'cpu':
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>';
+      default:
+        return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';
+    }
+  }
+
+  // 1. Service Accordion Toggle
   const serviceItems = document.querySelectorAll('.service-item');
   serviceItems.forEach((item) => {
     item.addEventListener('click', () => {
@@ -224,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardCategory = card.getAttribute('data-category');
         if (filterValue === 'all' || cardCategory === filterValue) {
           card.style.display = '';
-          card.style.animation = `cardReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s both`;
+          card.style.animation = 'cardReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) ' + delay + 's both';
           delay += 0.05;
         } else {
           card.style.display = 'none';
@@ -236,87 +286,144 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Project Case Study Modal (Matches Frame 00:16 - 00:19)
+  // 3. Project Case Study / Details View (Matches Charan Teja Experience)
   const modal = document.getElementById('caseStudyModal');
   const modalBackBtn = document.getElementById('modalBackBtn');
+  const csBottomBackBtn = document.getElementById('csBottomBackBtn');
+
+  function closeCaseStudy() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    const workSec = document.getElementById('work');
+    if (workSec) {
+      workSec.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   function openProjectModal(projectId) {
     const proj = projectsData.find(p => p.id === projectId) || projectsData[0];
+    if (!modal) return;
 
-    document.getElementById('modalTagline').textContent = proj.subtitle;
-    document.getElementById('modalAuthor').textContent = proj.author;
-    document.getElementById('modalTitle').textContent = proj.fullTitle;
-    document.getElementById('modalLead').textContent = proj.leadDescription;
-    document.getElementById('modalHeroImg').src = proj.image;
-    document.getElementById('modalQuote').textContent = proj.quote;
+    // Overview Header
+    const titleEl = document.getElementById('csTitle');
+    if (titleEl) titleEl.textContent = proj.name || proj.fullTitle;
 
-    // Live Preview Link
-    const modalLiveLink = document.getElementById('modalLiveLink');
-    if (modalLiveLink) {
-      modalLiveLink.href = proj.liveUrl || '#';
-      const liveSpan = modalLiveLink.querySelector('span');
-      if (liveSpan) {
-        liveSpan.textContent = (proj.liveUrl.includes('.site') || proj.liveUrl.includes('.com')) ? 'Live Preview ↗' : 'Live Demo ↗';
+    const subEl = document.getElementById('csSubtitle');
+    if (subEl) subEl.textContent = proj.subtitle;
+
+    const heroImgEl = document.getElementById('csHeroImg');
+    if (heroImgEl) {
+      heroImgEl.src = proj.image;
+      heroImgEl.alt = (proj.name || proj.fullTitle) + ' Showcase';
+    }
+
+    const descEl = document.getElementById('csDesc');
+    if (descEl) descEl.textContent = proj.description || proj.leadDescription;
+
+    // Repository Link
+    const gitBtn = document.getElementById('csGitBtn');
+    if (gitBtn) {
+      if (proj.github || proj.githubUrl) {
+        gitBtn.href = proj.github || proj.githubUrl;
+        gitBtn.style.display = 'inline-flex';
+      } else {
+        gitBtn.style.display = 'none';
       }
     }
 
-    // GitHub Repo Link
-    const modalGitLink = document.getElementById('modalGitLink');
-    if (modalGitLink) {
-      modalGitLink.href = proj.githubUrl || 'https://github.com/edukondalutatukula130404';
+    // Live Application Link
+    const liveBtn = document.getElementById('csLiveBtn');
+    if (liveBtn) {
+      if (proj.live || proj.liveUrl) {
+        liveBtn.href = proj.live || proj.liveUrl;
+        liveBtn.style.display = 'inline-flex';
+      } else {
+        liveBtn.style.display = 'none';
+      }
     }
 
-    // Problem Solved & Contribution
-    const problemEl = document.getElementById('modalProblemText');
-    if (problemEl) {
-      problemEl.textContent = proj.problemSolved || '';
+    // How It Works Section
+    const workflowSub = document.getElementById('csWorkflowSub');
+    if (workflowSub) workflowSub.textContent = proj.workflowSubtitle || 'Seamless end-to-end workflow from initiation to completion.';
+
+    const stepsGrid = document.getElementById('csStepsGrid');
+    if (stepsGrid && Array.isArray(proj.workflows)) {
+      stepsGrid.innerHTML = proj.workflows.map((wf, idx) => `
+        <div class="cs-step-card">
+          <span class="cs-step-num">${wf.step || String(idx + 1).padStart(2, '0')}</span>
+          <h4 class="cs-step-title">${wf.title}</h4>
+          <p class="cs-step-text">${wf.text}</p>
+        </div>
+      `).join('');
     }
 
-    const contribEl = document.getElementById('modalContributionText');
-    if (contribEl) {
-      contribEl.textContent = proj.contribution || '';
-    }
+    // App Features Section
+    const featSub = document.getElementById('csFeaturesSub');
+    if (featSub) featSub.textContent = proj.featuresSubtitle || 'Key architectural and design features powering this application.';
 
-    // Measurable Outcomes / Metrics
-    const metricsEl = document.getElementById('modalMetricsText');
-    if (metricsEl) {
-      metricsEl.textContent = proj.metrics || '';
-    }
-
-    // Features
-    const featContainer = document.getElementById('modalFeatures');
-    featContainer.innerHTML = proj.features.map(f => `
-      <div class="cs-feat-card">
-        <h4 class="cs-feat-title">${f.title}</h4>
-        <p class="cs-feat-desc">${f.desc}</p>
-      </div>
-    `).join('');
-
-    // Tech stack pills
-    const techContainer = document.getElementById('modalTechPills');
-    if (techContainer) {
-      techContainer.innerHTML = proj.tech.map(t => `<span class="meta-pill">${t}</span>`).join('');
-    }
-
-    // Populate /MORE WORK
-    const moreWorkContainer = document.getElementById('modalMoreWorkGrid');
-    if (moreWorkContainer) {
-      const otherProjects = projectsData.filter(p => p.id !== proj.id);
-      moreWorkContainer.innerHTML = otherProjects.slice(0, 2).map(op => `
-        <div class="project-card" onclick="window.switchModalProject('${op.id}')">
-          <div class="card-preview-wrap">
-            <span class="card-badge ${op.badge === 'EXPLORATION' ? 'exploration' : ''}">${op.badge}</span>
-            <img src="${op.image}" alt="${op.tagline}" class="card-preview-img">
+    const featGrid = document.getElementById('csFeaturesGrid');
+    if (featGrid && Array.isArray(proj.features)) {
+      featGrid.innerHTML = proj.features.map(f => `
+        <div class="cs-feature-card">
+          <div class="cs-feat-icon-box">
+            ${getFeatureIcon(f.icon)}
           </div>
-          <div class="card-details-wrap">
-            <h3 class="card-title">${op.tagline} <span class="card-arrow">↗</span></h3>
-            <div class="card-sub-row">
-              <span>${op.subtitle}</span>
-              <span>${op.author}</span>
-            </div>
+          <div class="cs-feat-info">
+            <h4 class="cs-feat-name">${f.title}</h4>
+            <p class="cs-feat-desc">${f.desc}</p>
           </div>
         </div>
       `).join('');
+    }
+
+    // Technologies We Use Section
+    const techSub = document.getElementById('csTechSub');
+    if (techSub) techSub.textContent = proj.techSubtitle || 'A balanced modern stack ensuring speed, reliability, and security.';
+
+    const techGrid = document.getElementById('csTechGrid');
+    if (techGrid && Array.isArray(proj.stack)) {
+      techGrid.innerHTML = proj.stack.map(tech => `
+        <div class="cs-tech-pill">
+          <span class="cs-tech-dot"></span>
+          <span>${tech}</span>
+        </div>
+      `).join('');
+    }
+
+    // System Architecture Section
+    const archCard = document.getElementById('csArchCard');
+    const archIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>';
+    if (archCard && proj.architecture) {
+      const sentences = proj.architecture.split(/(?<=\.)\s+/).map(s => s.trim()).filter(Boolean);
+      archCard.innerHTML = sentences.map(sent => `
+        <div class="cs-arch-row">
+          <div class="cs-arch-icon-wrap">${archIcon}</div>
+          <p class="cs-arch-text">${sent}</p>
+        </div>
+      `).join('');
+    }
+
+    const archPills = document.getElementById('csArchPills');
+    if (archPills && Array.isArray(proj.stack)) {
+      archPills.innerHTML = proj.stack.map(tech => `
+        <span class="cs-arch-pill">${tech}</span>
+      `).join('');
+    }
+
+    // Up Next Navigation
+    const currentIdx = projectsData.findIndex(p => p.id === proj.id);
+    const nextProj = projectsData[(currentIdx + 1) % projectsData.length];
+    const nextTitle = document.getElementById('csNextTitle');
+    const nextSub = document.getElementById('csNextSubtitle');
+    const nextCard = document.getElementById('csNextCard');
+
+    if (nextTitle) nextTitle.textContent = nextProj.name;
+    if (nextSub) nextSub.textContent = nextProj.subtitle;
+    if (nextCard) {
+      nextCard.onclick = () => {
+        openProjectModal(nextProj.id);
+      };
     }
 
     modal.classList.add('open');
@@ -327,15 +434,31 @@ document.addEventListener('DOMContentLoaded', () => {
   window.openProjectModal = openProjectModal;
   window.switchModalProject = function(id) {
     openProjectModal(id);
-    modal.scrollTop = 0;
+  };
+
+  // Smooth scroll within Case Study container
+  window.scrollToCaseStudySection = function(sectionId) {
+    if (!modal) return;
+    const target = document.getElementById(sectionId);
+    if (target) {
+      const topOffset = target.offsetTop - 70;
+      modal.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
   };
 
   if (modalBackBtn) {
-    modalBackBtn.addEventListener('click', () => {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    modalBackBtn.addEventListener('click', closeCaseStudy);
   }
+  if (csBottomBackBtn) {
+    csBottomBackBtn.addEventListener('click', closeCaseStudy);
+  }
+
+  // Keyboard Escape listener
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+      closeCaseStudy();
+    }
+  });
 
   // Bind project cards
   projectCards.forEach(card => {
