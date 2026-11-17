@@ -453,6 +453,23 @@ document.addEventListener('DOMContentLoaded', () => {
     csBottomBackBtn.addEventListener('click', closeCaseStudy);
   }
 
+  // Case Study Footer Navigation Links: close modal and scroll to section on home page
+  document.querySelectorAll('.cs-footer-nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('data-target');
+      closeCaseStudy();
+      if (targetId) {
+        setTimeout(() => {
+          const el = document.getElementById(targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 150);
+      }
+    });
+  });
+
   // Keyboard Escape listener
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal && modal.classList.contains('open')) {

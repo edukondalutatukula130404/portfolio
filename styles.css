@@ -2362,6 +2362,14 @@ html.dark-theme .btn-resume-cta:hover,
   border-color: #ffffff;
 }
 
+.cs-showcase-footer {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
 /* =========================================
    CONTACT MODAL POPUP
    ========================================= */
