@@ -260,7 +260,7 @@ button {
 /* Hero Content Grid: Left bio, Center portrait, Right links */
 .hero-showcase {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(360px, 1.25fr) auto minmax(180px, 0.75fr);
   align-items: end;
   width: 100%;
   position: relative;
@@ -271,7 +271,7 @@ button {
 /* Left Hero Column */
 .hero-left-col {
   padding-bottom: 30px;
-  max-width: 460px;
+  max-width: 480px;
   width: 100%;
   z-index: 3;
   align-self: end;
@@ -298,13 +298,13 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 42px;
-  padding: 0 22px;
+  height: 40px;
+  padding: 0 18px;
   box-sizing: border-box;
   border-radius: var(--radius-pill);
   background: #111111;
   color: #ffffff;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
@@ -326,11 +326,13 @@ button {
 }
 
 .hero-actions-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: nowrap;
-  margin-top: 6px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: nowrap !important;
+  margin-top: 8px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .btn-download-resume {
@@ -338,14 +340,14 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 42px;
-  padding: 0 22px;
+  height: 40px;
+  padding: 0 18px;
   box-sizing: border-box;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.22);
   color: #ffffff;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -1877,7 +1879,8 @@ html.dark-theme .cs-detail-text,
 
   .hero-actions-row {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin: 8px auto 0;
   }
 
   .hero-right-col {
