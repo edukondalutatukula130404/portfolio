@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       liveUrl: 'https://clothing.speshway.site',
       githubUrl: 'https://github.com/edukondalutatukula130404/vexa-style-hub.git',
       tech: ['HTML5/CSS3', 'JavaScript', 'Cart Engine', 'Lookbook UI', 'Responsive Design', 'SEO'],
-      image: 'assets/showcase-clothing.jpg',
+      image: 'assets/showcase-clothing.jpg?v=2',
       fullTitle: 'Speshway Clothing & Apparel Storefront',
       leadDescription: 'A high-conversion fashion e-commerce storefront crafted with editorial typography, interactive lookbooks, visual size and color variant selectors, and a fluid slide-over mini-cart drawer.',
       quote: '“Engineered clothing.speshway.site to offer an immersive, visual-first fashion shopping experience with smooth animations, instant size selectors, and zero-friction cart interactions.”',
