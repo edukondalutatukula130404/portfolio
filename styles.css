@@ -3277,18 +3277,30 @@ html.custom-cursor-active * {
   justify-content: center;
   margin: 30px 0 20px;
   flex: 1;
+  overflow: hidden;
+  padding: 0 16px;
 }
 
 .showcase-giant-name {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: clamp(3.2rem, 10vw, 8.8rem);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.8rem, 5.6vw, 5.4rem);
   font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #ffffff;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
   user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35em;
+  max-width: 100%;
+}
+
+.showcase-giant-name span {
+  display: inline-block;
   white-space: nowrap;
 }
 
@@ -3328,14 +3340,19 @@ html.custom-cursor-active * {
     text-align: left;
     max-width: 100%;
   }
-  .showcase-giant-name {
-    font-size: clamp(2.4rem, 12vw, 5rem);
-    white-space: normal;
-  }
   .showcase-bottom-row {
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .showcase-giant-name {
+    font-size: clamp(2.4rem, 11vw, 3.8rem);
+    flex-direction: column;
+    gap: 0.1em;
+    line-height: 0.95;
   }
 }
 
