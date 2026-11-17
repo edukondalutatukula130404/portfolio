@@ -654,11 +654,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Custom Glowing Lime Cursor Follower Animation (Matches Visual Design)
+  // 8. Custom Glowing Lime Circle Cursor Animation (Matches Visual Design)
   function initCustomCursor() {
-    // Only run on desktop/devices with fine pointer and hover support
-    if (window.matchMedia('(pointer: coarse)').matches) return;
-
     const ring = document.getElementById('customCursorRing');
     const dot = document.getElementById('customCursorDot');
     if (!ring || !dot) return;
@@ -671,14 +668,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let isClicked = false;
     let isVisible = false;
 
-    window.addEventListener('mousemove', (e) => {
+    function onPointerMove(e) {
       mouseX = e.clientX;
       mouseY = e.clientY;
       if (!isVisible) {
         isVisible = true;
+        document.documentElement.classList.add('custom-cursor-active');
         ring.style.opacity = '1';
         dot.style.opacity = '1';
       }
+    }
+
+    window.addEventListener('mousemove', onPointerMove, { passive: true });
+    window.addEventListener('pointermove', onPointerMove, { passive: true });
+
+    // Hide when touch input occurs (e.g. tapping screen on touchscreen laptops)
+    window.addEventListener('touchstart', () => {
+      document.documentElement.classList.remove('custom-cursor-active');
+      ring.style.opacity = '0';
+      dot.style.opacity = '0';
+      isVisible = false;
     }, { passive: true });
 
     document.addEventListener('mouseleave', () => {
@@ -724,10 +733,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function render() {
       // Smooth 60fps/120fps hardware-accelerated lerp tracking
-      ringX = lerp(ringX, mouseX, 0.18);
-      ringY = lerp(ringY, mouseY, 0.18);
+      ringX = lerp(ringX, mouseX, 0.22);
+      ringY = lerp(ringY, mouseY, 0.22);
 
-      const scale = isClicked ? 0.8 : (isHovered ? 1.45 : 1);
+      const scale = isClicked ? 0.8 : (isHovered ? 1.5 : 1);
       ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(${scale})`;
       dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
 
