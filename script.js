@@ -336,11 +336,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Bind project cards
   projectCards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.card-links-row') || e.target.closest('a') || e.target.closest('button')) {
+        return;
+      }
       const id = card.getAttribute('data-id');
       openProjectModal(id);
     });
   });
+
+  // Guarantee all Live Preview & Demo direct buttons open target sites reliably
+  document.querySelectorAll('.card-action-btn.live-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const href = btn.getAttribute('href');
+      if (href && href !== '#') {
+        e.preventDefault();
+        window.open(href, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
+
+  // Guarantee modal Live Link opens target sites reliably
+  if (modalLiveLink) {
+    modalLiveLink.addEventListener('click', (e) => {
+      const href = modalLiveLink.getAttribute('href');
+      if (href && href !== '#') {
+        e.preventDefault();
+        window.open(href, '_blank', 'noopener,noreferrer');
+      }
+    });
+  }
 
   // Helper for Email Validation
   function isValidEmail(email) {
