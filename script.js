@@ -342,7 +342,119 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Contact Dialog Modal
+  // Helper for Email Validation
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  }
+
+  // 4. Contact Forms & Validation (Embedded Form + Quick Dialog)
+  const mainContactForm = document.getElementById('mainContactForm');
+  const mainMsgInput = document.getElementById('mainMessage');
+  const charCounter = document.getElementById('charCounter');
+
+  if (mainMsgInput && charCounter) {
+    mainMsgInput.addEventListener('input', () => {
+      const len = mainMsgInput.value.length;
+      charCounter.textContent = `${len} / 1000`;
+      if (len > 1000) {
+        charCounter.style.color = '#ef4444';
+      } else {
+        charCounter.style.color = '';
+      }
+    });
+  }
+
+  if (mainContactForm) {
+    const nameInput = document.getElementById('mainName');
+    const emailInput = document.getElementById('mainEmail');
+    const subjectSelect = document.getElementById('mainSubject');
+    const msgInput = document.getElementById('mainMessage');
+    const nameErr = document.getElementById('nameError');
+    const emailErr = document.getElementById('emailError');
+    const msgErr = document.getElementById('messageError');
+    const successBanner = document.getElementById('formSuccessBanner');
+    const successDesc = document.getElementById('successDesc');
+    const submitBtn = document.getElementById('submitContactBtn');
+
+    mainContactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let hasError = false;
+
+      // Reset errors
+      [nameErr, emailErr, msgErr].forEach(el => { if (el) el.textContent = ''; });
+      [nameInput, emailInput, msgInput].forEach(el => { if (el) el.classList.remove('input-error'); });
+
+      // Name validation
+      const name = nameInput.value.trim();
+      if (!name || name.length < 2) {
+        if (nameErr) nameErr.textContent = 'Please enter your name (at least 2 characters).';
+        nameInput.classList.add('input-error');
+        hasError = true;
+      }
+
+      // Email validation
+      const email = emailInput.value.trim();
+      if (!email || !isValidEmail(email)) {
+        if (emailErr) emailErr.textContent = 'Please enter a valid email address (e.g., name@domain.com).';
+        emailInput.classList.add('input-error');
+        hasError = true;
+      }
+
+      // Message validation
+      const message = msgInput.value.trim();
+      if (!message || message.length < 10) {
+        if (msgErr) msgErr.textContent = 'Please include a message with at least 10 characters.';
+        msgInput.classList.add('input-error');
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      const subject = subjectSelect ? subjectSelect.value : 'Inquiry from Portfolio';
+
+      // Submit State
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span class="btn-text">Sending...</span>
+          <span class="btn-spinner"></span>
+        `;
+      }
+
+      // Show Success Notification Banner
+      if (successBanner) {
+        if (successDesc) {
+          successDesc.textContent = `Thank you, ${name}! Your email client has been prepared with your message to tatukulaedukondalu@gmail.com.`;
+        }
+        successBanner.style.display = 'flex';
+      }
+
+      showToast(`Thank you, ${name}! Launching email client...`);
+
+      // Proper Email Delivery via URI Encoded mailto
+      setTimeout(() => {
+        const bodyContent = `From: ${name} (${email})\nInquiry Topic: ${subject}\n\nMessage Details:\n${message}\n\n--\nSent via Portfolio Contact System`;
+        window.location.href = `mailto:tatukulaedukondalu@gmail.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent(bodyContent)}`;
+
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `
+              <span class="btn-text">Send Message</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            `;
+          }
+          mainContactForm.reset();
+          if (charCounter) charCounter.textContent = '0 / 1000';
+        }, 1500);
+      }, 700);
+    });
+  }
+
+  // Quick Dialog Modal
   const contactModal = document.getElementById('contactDialog');
   const closeContactBtn = document.getElementById('closeContactBtn');
   const contactTriggers = document.querySelectorAll('.trigger-contact');
@@ -368,34 +480,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Toast Functionality
-  function showToast(msg) {
-    const toast = document.getElementById('toastNotice');
-    if (toast) {
-      toast.textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3500);
-    }
-  }
-  window.showToast = showToast;
+  // Quick Contact Form Submission & Validation
+  const quickContactForm = document.getElementById('contactQuickForm');
+  if (quickContactForm) {
+    const qName = document.getElementById('senderName');
+    const qEmail = document.getElementById('senderEmail');
+    const qMsg = document.getElementById('senderMsg');
+    const qNameErr = document.getElementById('quickNameError');
+    const qEmailErr = document.getElementById('quickEmailError');
+    const qMsgErr = document.getElementById('quickMsgError');
+    const qSuccessBanner = document.getElementById('quickSuccessBanner');
+    const qSubmitBtn = document.getElementById('quickSubmitBtn');
 
-  // Handle Contact Form Submission
-  const contactForm = document.getElementById('contactQuickForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    quickContactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('senderName').value;
-      const email = document.getElementById('senderEmail').value;
-      const message = document.getElementById('senderMsg').value;
+      let hasError = false;
 
+      [qNameErr, qEmailErr, qMsgErr].forEach(el => { if (el) el.textContent = ''; });
+      [qName, qEmail, qMsg].forEach(el => { if (el) el.classList.remove('input-error'); });
+
+      const name = qName.value.trim();
+      if (!name || name.length < 2) {
+        if (qNameErr) qNameErr.textContent = 'Please enter your name.';
+        qName.classList.add('input-error');
+        hasError = true;
+      }
+
+      const email = qEmail.value.trim();
+      if (!email || !isValidEmail(email)) {
+        if (qEmailErr) qEmailErr.textContent = 'Please enter a valid email.';
+        qEmail.classList.add('input-error');
+        hasError = true;
+      }
+
+      const message = qMsg.value.trim();
+      if (!message || message.length < 8) {
+        if (qMsgErr) qMsgErr.textContent = 'Please write a message (at least 8 chars).';
+        qMsg.classList.add('input-error');
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      if (qSubmitBtn) {
+        qSubmitBtn.disabled = true;
+        qSubmitBtn.textContent = 'Preparing email...';
+      }
+
+      if (qSuccessBanner) qSuccessBanner.style.display = 'flex';
       showToast(`Thank you, ${name}! Launching email client...`);
+
       setTimeout(() => {
-        window.location.href = `mailto:tatukulaedukondalu@gmail.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + email)}`;
-        contactModal.classList.remove('open');
-        contactForm.reset();
-      }, 900);
+        const bodyContent = `From: ${name} (${email})\n\nMessage:\n${message}\n\n--\nSent via Quick Dialog`;
+        window.location.href = `mailto:tatukulaedukondalu@gmail.com?subject=${encodeURIComponent('Quick Message from ' + name)}&body=${encodeURIComponent(bodyContent)}`;
+
+        setTimeout(() => {
+          if (contactModal) contactModal.classList.remove('open');
+          quickContactForm.reset();
+          if (qSuccessBanner) qSuccessBanner.style.display = 'none';
+          if (qSubmitBtn) {
+            qSubmitBtn.disabled = false;
+            qSubmitBtn.textContent = 'Send Message ↗';
+          }
+        }, 1200);
+      }, 700);
     });
   }
 

@@ -2541,3 +2541,403 @@ html.dark-theme .toast-notice,
   border: 1px solid #333344;
 }
 
+/* =========================================
+   PROJECT CARD ENHANCEMENTS (ROLES & ACTIONS)
+   ========================================= */
+.card-role-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.card-role-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4f46e5;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.02em;
+}
+
+.card-outcome-badge {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.card-problem-text {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 8px 0 10px;
+}
+
+.card-links-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.card-action-btn.live-btn {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.card-action-btn.live-btn:hover {
+  background: #27272a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-action-btn.git-btn {
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  color: #18181b;
+}
+
+.card-action-btn.git-btn:hover {
+  background: #e4e4e7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-action-btn.case-study-btn {
+  background: transparent;
+  border: 1px dashed #d1d5db;
+  color: #4b5563;
+}
+
+.card-action-btn.case-study-btn:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+  transform: translateY(-2px);
+}
+
+html.dark-theme .card-role-badge,
+[data-theme="dark"] .card-role-badge {
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.18);
+}
+
+html.dark-theme .card-outcome-badge,
+[data-theme="dark"] .card-outcome-badge {
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.16);
+}
+
+html.dark-theme .card-problem-text,
+[data-theme="dark"] .card-problem-text {
+  color: #9ca3af;
+}
+
+html.dark-theme .card-action-btn.live-btn,
+[data-theme="dark"] .card-action-btn.live-btn {
+  background: #ffffff;
+  color: #0b0b0e;
+}
+
+html.dark-theme .card-action-btn.live-btn:hover,
+[data-theme="dark"] .card-action-btn.live-btn:hover {
+  background: #e4e4e7;
+}
+
+html.dark-theme .card-action-btn.git-btn,
+[data-theme="dark"] .card-action-btn.git-btn {
+  background: #1c1c24;
+  border-color: #2b2b38;
+  color: #f4f4f5;
+}
+
+html.dark-theme .card-action-btn.git-btn:hover,
+[data-theme="dark"] .card-action-btn.git-btn:hover {
+  background: #282834;
+}
+
+html.dark-theme .card-action-btn.case-study-btn,
+[data-theme="dark"] .card-action-btn.case-study-btn {
+  border-color: #3f3f4e;
+  color: #a1a1aa;
+}
+
+html.dark-theme .card-action-btn.case-study-btn:hover,
+[data-theme="dark"] .card-action-btn.case-study-btn:hover {
+  border-color: #818cf8;
+  color: #c7d2fe;
+}
+
+/* =========================================
+   TIMELINE SECTION HEADINGS
+   ========================================= */
+.timeline-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #818cf8;
+  padding: 8px 0 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+}
+
+.tsh-icon {
+  font-size: 16px;
+}
+
+/* =========================================
+   EMBEDDED CONTACT FORM
+   ========================================= */
+.embedded-contact-card {
+  width: 100%;
+  max-width: 680px;
+  margin: 36px auto 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 32px 36px;
+  text-align: left;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+}
+
+.embedded-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.form-row.dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-label .req {
+  color: #ef4444;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 14px;
+  font-family: inherit;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.form-input.input-error,
+.form-textarea.input-error {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.field-error {
+  font-size: 11.5px;
+  color: #ef4444;
+  font-weight: 500;
+  min-height: 16px;
+}
+
+.field-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.char-counter {
+  font-size: 11.5px;
+  color: #9ca3af;
+}
+
+.form-success-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.success-heading {
+  font-size: 14px;
+  color: #16a34a;
+  display: block;
+}
+
+.success-desc {
+  font-size: 12.5px;
+  color: #374151;
+  margin: 2px 0 0;
+}
+
+.form-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-submit-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  background: #111111;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-submit-contact:hover {
+  background: #27272a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+html.dark-theme .embedded-contact-card,
+[data-theme="dark"] .embedded-contact-card {
+  background: #131318;
+  border-color: #242430;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.4);
+}
+
+html.dark-theme .form-label,
+[data-theme="dark"] .form-label {
+  color: #e4e4e7;
+}
+
+html.dark-theme .form-input,
+html.dark-theme .form-select,
+html.dark-theme .form-textarea,
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea {
+  background: #1a1a22;
+  border-color: #2e2e3e;
+  color: #f4f4f5;
+}
+
+html.dark-theme .form-input:focus,
+html.dark-theme .form-select:focus,
+html.dark-theme .form-textarea:focus,
+[data-theme="dark"] .form-input:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-textarea:focus {
+  background: #20202a;
+  border-color: #6366f1;
+}
+
+html.dark-theme .btn-submit-contact,
+[data-theme="dark"] .btn-submit-contact {
+  background: #ffffff;
+  color: #0b0b0e;
+}
+
+html.dark-theme .btn-submit-contact:hover,
+[data-theme="dark"] .btn-submit-contact:hover {
+  background: #e4e4e7;
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.2);
+}
+
+html.dark-theme .success-desc,
+[data-theme="dark"] .success-desc {
+  color: #d1d5db;
+}
+
+@media (max-width: 640px) {
+  .form-row.dual {
+    grid-template-columns: 1fr;
+  }
+  .embedded-contact-card {
+    padding: 24px 18px;
+  }
+}
+
