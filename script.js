@@ -654,5 +654,90 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 8. Custom Glowing Lime Cursor Follower Animation (Matches Visual Design)
+  function initCustomCursor() {
+    // Only run on desktop/devices with fine pointer and hover support
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    const ring = document.getElementById('customCursorRing');
+    const dot = document.getElementById('customCursorDot');
+    if (!ring || !dot) return;
+
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
+    let isHovered = false;
+    let isClicked = false;
+    let isVisible = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!isVisible) {
+        isVisible = true;
+        ring.style.opacity = '1';
+        dot.style.opacity = '1';
+      }
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', () => {
+      ring.style.opacity = '0';
+      dot.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+      if (isVisible) {
+        ring.style.opacity = '1';
+        dot.style.opacity = '1';
+      }
+    });
+
+    window.addEventListener('mousedown', () => {
+      isClicked = true;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isClicked = false;
+    });
+
+    // Detect hover on interactive elements using event delegation
+    const interactiveSelector = 'a, button, .project-card, .service-item, .timeline-item, .skill-pill, .theme-toggle-btn, input, textarea, select, .stretched-card-link';
+
+    document.addEventListener('mouseover', (e) => {
+      if (e.target && e.target.closest(interactiveSelector)) {
+        isHovered = true;
+        ring.classList.add('cursor-hover');
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target && e.target.closest(interactiveSelector)) {
+        isHovered = false;
+        ring.classList.remove('cursor-hover');
+      }
+    });
+
+    function lerp(start, end, factor) {
+      return start + (end - start) * factor;
+    }
+
+    function render() {
+      // Smooth 60fps/120fps hardware-accelerated lerp tracking
+      ringX = lerp(ringX, mouseX, 0.18);
+      ringY = lerp(ringY, mouseY, 0.18);
+
+      const scale = isClicked ? 0.8 : (isHovered ? 1.45 : 1);
+      ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%) scale(${scale})`;
+      dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+
+      requestAnimationFrame(render);
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  initCustomCursor();
+
 });
 

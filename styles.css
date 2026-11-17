@@ -3038,3 +3038,52 @@ html.dark-theme .success-desc,
   }
 }
 
+/* =========================================
+   CUSTOM GLOWING LIME CURSOR ANIMATION
+   ========================================= */
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.8px solid #b6e60b;
+  background: rgba(182, 230, 11, 0.12);
+  box-shadow: 0 0 14px rgba(182, 230, 11, 0.28);
+  pointer-events: none;
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 0.25s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor-ring.cursor-hover {
+  border-color: #d4f84c;
+  background: rgba(182, 230, 11, 0.22);
+  box-shadow: 0 0 22px rgba(182, 230, 11, 0.45);
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b6e60b;
+  box-shadow: 0 0 8px #b6e60b;
+  pointer-events: none;
+  z-index: 1000000;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  will-change: transform;
+}
+
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none !important;
+  }
+}
+
