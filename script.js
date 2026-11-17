@@ -138,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'InvoicePro Desktop Application Suite',
       subtitle: 'InvoicePro Desktop',
       author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://github.com/edukondalutatukula130404/desktop-application',
-      githubUrl: 'https://github.com/edukondalutatukula130404/desktop-application',
+      liveUrl: 'https://github.com/edukondalutatukula130404',
+      githubUrl: 'https://github.com/edukondalutatukula130404',
       tech: ['Electron', 'React', 'Node.js', 'MongoDB', 'NSIS Installer', 'Offline-First'],
       image: 'assets/project-desktop.svg',
       fullTitle: 'InvoicePro Desktop Application Suite',
@@ -341,6 +341,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       const id = card.getAttribute('data-id');
+      if (id === 'desktop-app') {
+        window.open('https://github.com/edukondalutatukula130404', '_blank', 'noopener,noreferrer');
+        return;
+      }
       openProjectModal(id);
     });
   });
