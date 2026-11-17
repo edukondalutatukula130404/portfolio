@@ -2901,9 +2901,14 @@ html.dark-theme .card-action-btn.case-study-btn:hover,
 .form-submit-row {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 20px;
   margin-top: 22px;
   flex-wrap: wrap;
+}
+
+.form-submit-row .btn-resume-cta {
+  margin-left: auto;
 }
 
 .btn-submit-contact {
@@ -3006,6 +3011,7 @@ html.dark-theme .success-desc,
   .btn-resume-cta {
     width: 100%;
     justify-content: center;
+    margin-left: 0 !important;
   }
 }
 
