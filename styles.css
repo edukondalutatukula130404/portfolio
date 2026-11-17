@@ -113,24 +113,20 @@ button {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   list-style: none;
 }
 
 .nav-link {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #4b5563;
   transition: var(--transition-smooth);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-}
-
-.nav-link span.count {
-  font-size: 11px;
-  color: var(--text-muted);
-  font-weight: 600;
+  text-decoration: none;
 }
 
 .nav-link:hover, .nav-link.active {
