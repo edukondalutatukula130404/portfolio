@@ -283,12 +283,77 @@ button {
 }
 
 .hero-role-title {
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-size: clamp(1.4rem, 2.3vw, 2.2rem);
   font-weight: 800;
-  color: #111111;
+  color: #ffffff;
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-align: left;
+}
+
+.hero-role-title .role-bold {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.hero-role-title .role-italic {
+  font-weight: 300;
+  font-style: italic;
+  color: #d1d5db;
+}
+
+.hero-crafting-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.crafting-label {
+  font-style: italic;
+  font-weight: 300;
+  color: #a1a1aa;
+}
+
+.crafting-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 28px;
+  min-width: 110px;
+  padding: 2px 14px;
+  border-radius: 6px;
+  background: rgba(182, 230, 11, 0.1);
+  border: 1px solid rgba(182, 230, 11, 0.35);
+  color: #ccff00;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.crafting-tech {
+  position: absolute;
+  white-space: nowrap;
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.crafting-tech.slide-out {
+  transform: translateY(-16px);
+  opacity: 0;
+}
+
+.crafting-tech.slide-in-prep {
+  transform: translateY(16px);
+  opacity: 0;
+  transition: none;
 }
 
 .hero-bio-text {

@@ -748,5 +748,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initCustomCursor();
 
+  // 9. Hero "Crafting with" Interactive Tech Scroller (MongoDB, Flutter, React...)
+  function initCraftingRoller() {
+    const el = document.getElementById('craftingTech');
+    if (!el) return;
+
+    // Technologies requested: MongoDB, Flutter, React + full stack
+    const skills = ['MongoDB', 'Flutter', 'React', 'Node.js', 'Python', 'MERN Stack', 'Express.js'];
+    let idx = 0;
+
+    setInterval(() => {
+      el.classList.add('slide-out');
+      setTimeout(() => {
+        idx = (idx + 1) % skills.length;
+        el.textContent = skills[idx];
+        el.classList.remove('slide-out');
+        el.classList.add('slide-in-prep');
+        void el.offsetWidth; // Force CSS reflow
+        el.classList.remove('slide-in-prep');
+      }, 350);
+    }, 2200);
+  }
+
+  initCraftingRoller();
+
 });
 
