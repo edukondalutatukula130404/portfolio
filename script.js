@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       liveUrl: 'https://ecom.speshway.site',
       githubUrl: 'https://github.com/edukondalutatukula130404/E_commerce.git',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Razorpay', 'REST APIs', 'Tailwind CSS'],
-      image: 'assets/showcase-ecommerce.jpg',
+      image: 'assets/showcase-ecommerce.jpg?v=2',
       fullTitle: 'Speshway Multi-Vendor E-Commerce Platform',
       leadDescription: 'A production-grade, multi-vendor e-commerce web platform engineered with high-speed catalog browsing, real-time cart state synchronization, secure payment gateway integration, and comprehensive customer & order management.',
       quote: '“Architected and deployed ecom.speshway.site, delivering an intuitive shopping experience with dynamic facet search, real-time inventory management, and end-to-end checkout with automated notifications.”',
