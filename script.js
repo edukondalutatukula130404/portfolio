@@ -342,7 +342,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       const id = card.getAttribute('data-id');
       if (id === 'desktop-app') {
-        window.open('https://github.com/edukondalutatukula130404', '_blank', 'noopener,noreferrer');
+        const directLink = card.querySelector('.card-title a') || card.querySelector('a.card-preview-wrap');
+        if (directLink) {
+          directLink.click();
+        } else {
+          window.location.assign('https://github.com/edukondalutatukula130404');
+        }
         return;
       }
       openProjectModal(id);
