@@ -1017,12 +1017,14 @@ html.dark-theme .btn-download-resume:hover,
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .timeline-date {
   font-size: 13.5px;
   color: #9ca3af;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .timeline-badge {
@@ -1939,6 +1941,17 @@ html.dark-theme .cs-detail-text,
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .timeline-right {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .skills-grid {
