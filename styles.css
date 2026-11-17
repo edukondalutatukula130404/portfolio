@@ -318,6 +318,56 @@ button {
   transform: translate(2px, -2px);
 }
 
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-download-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-download-resume:hover {
+  background: #f4f4f5;
+  border-color: #9ca3af;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-download-resume svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-download-resume:hover svg {
+  transform: translateY(2px);
+}
+
+html.dark-theme .btn-download-resume,
+[data-theme="dark"] .btn-download-resume {
+  border-color: #3f3f46;
+  color: #f4f4f5;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html.dark-theme .btn-download-resume:hover,
+[data-theme="dark"] .btn-download-resume:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #71717a;
+}
+
 /* Center Hero Portrait */
 .hero-center-col {
   position: relative;
@@ -1008,6 +1058,19 @@ button {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
+.skill-pill.highlight-pill {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.35);
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.skill-pill.highlight-pill:hover {
+  background: rgba(34, 197, 94, 0.22);
+  border-color: rgba(34, 197, 94, 0.6);
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.25);
+}
+
 /* =========================================
    FOOTER CTA SECTION (Frame 00:14 - 00:15)
    ========================================= */
@@ -1061,6 +1124,58 @@ button {
   background: #27272a;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.cta-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-resume-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1d5db;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-resume-cta:hover {
+  background: #ffffff;
+  border-color: #9ca3af;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.btn-resume-cta svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-resume-cta:hover svg {
+  transform: translateY(2px);
+}
+
+html.dark-theme .btn-resume-cta,
+[data-theme="dark"] .btn-resume-cta {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+html.dark-theme .btn-resume-cta:hover,
+[data-theme="dark"] .btn-resume-cta:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.12);
 }
 
 /* Bottom Bar (Frame 00:15) */
@@ -1266,6 +1381,161 @@ button {
 .btn-contact-outline:hover {
   background: #f9fafb;
   border-color: #9ca3af;
+}
+
+.btn-github-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: #24292e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.btn-github-preview:hover {
+  background: #1b1f23;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.btn-github-preview svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-github-preview:hover svg {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* Metrics Banner */
+.cs-metrics-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(59, 130, 246, 0.08));
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.cs-metrics-badge {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.15);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.cs-metrics-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Dual Grid: Problem & Individual Contribution */
+.cs-details-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.cs-detail-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px 26px;
+  transition: var(--transition-smooth);
+}
+
+.cs-detail-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.cs-detail-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.cs-detail-icon {
+  font-size: 18px;
+}
+
+.cs-detail-text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #4b5563;
+  margin: 0;
+}
+
+html.dark-theme .btn-github-preview,
+[data-theme="dark"] .btn-github-preview {
+  background: #1e1e24;
+  border-color: #383845;
+  color: #ffffff;
+}
+
+html.dark-theme .btn-github-preview:hover,
+[data-theme="dark"] .btn-github-preview:hover {
+  background: #2a2a34;
+  border-color: #555566;
+}
+
+html.dark-theme .cs-metrics-banner,
+[data-theme="dark"] .cs-metrics-banner {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(59, 130, 246, 0.12));
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+html.dark-theme .cs-metrics-badge,
+[data-theme="dark"] .cs-metrics-badge {
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.22);
+}
+
+html.dark-theme .cs-metrics-text,
+[data-theme="dark"] .cs-metrics-text {
+  color: #f3f4f6;
+}
+
+html.dark-theme .cs-detail-box,
+[data-theme="dark"] .cs-detail-box {
+  background: #18181f;
+  border-color: #272733;
+}
+
+html.dark-theme .cs-detail-heading,
+[data-theme="dark"] .cs-detail-heading {
+  color: #f9fafb;
+}
+
+html.dark-theme .cs-detail-text,
+[data-theme="dark"] .cs-detail-text {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .cs-details-dual-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .case-study-hero-img-wrap {
@@ -1593,7 +1863,7 @@ button {
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .case-study-features-grid {
@@ -1604,6 +1874,10 @@ button {
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .nav-menu {

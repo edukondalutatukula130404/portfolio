@@ -1,8 +1,40 @@
 // Portfolio Interactive Engine - Matches Exact Video Experience
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Project Database - Real-Time Speshway & Vexa Projects
+  // Project Database - Real-Time Speshway, AI & Vexa Projects
   const projectsData = [
+    {
+      id: 'chatbot',
+      category: 'ai',
+      badge: 'AI & NLP',
+      tagline: 'AI-Based Chatbot for Educational Systems',
+      subtitle: 'Natural Language Processing',
+      author: 'Autonomous AI Project',
+      liveUrl: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
+      githubUrl: 'https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems',
+      tech: ['Python', 'Natural Language Processing', 'NLTK', 'Flask REST API', 'JavaScript', 'HTML5/CSS3'],
+      image: 'assets/project-chatbot.svg',
+      fullTitle: 'AI-Based Chatbot for Educational Systems',
+      leadDescription: 'Designed and implemented an AI-powered conversational chatbot engineered with Natural Language Processing (NLP) techniques, custom intent classifiers, and real-time query resolution to provide instantaneous 24/7 academic support for students.',
+      quote: '“Designed and implemented an AI-powered chatbot for educational systems to provide real-time academic assistance to students. Used Natural Language Processing (NLP) techniques to analyze user input and generate accurate responses.”',
+      problemSolved: 'Students face substantial delays receiving answers to routine curriculum, exam schedule, syllabus, and grading queries outside classroom hours, causing academic friction and placing repetitive administrative burdens on teaching staff.',
+      contribution: 'Engineered the NLP preprocessing pipeline (tokenization, lemmatization, stop-word elimination), implemented intent matching algorithms with confidence scoring, built responsive floating chat UI components, and integrated Flask REST endpoints for sub-120ms response generation.',
+      features: [
+        {
+          title: 'Natural Language Processing & Intent Matching',
+          desc: 'Tokenizes and evaluates varied student phrasings using customized NLP classification models to yield precise, context-aware answers.'
+        },
+        {
+          title: 'Interactive Web-Based Chat Experience',
+          desc: 'Sleek, responsive chat interface featuring typing indicators, prompt suggestion chips, message history, and auto-scroll.'
+        },
+        {
+          title: 'Real-Time Flask API & Knowledge Engine',
+          desc: 'Lightweight Python microservice handling academic FAQs, examination schedules, syllabus details, and course reference materials.'
+        }
+      ],
+      metrics: '<120ms Response Time • 92%+ Intent Accuracy • 24/7 Automated Availability'
+    },
     {
       id: 'ecom',
       category: 'ecom',
@@ -11,11 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
       subtitle: 'ecom.speshway.site',
       author: 'Speshway Solutions Pvt Ltd',
       liveUrl: 'https://ecom.speshway.site',
+      githubUrl: 'https://github.com/edukondalutatukula130404/E_commerce.git',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Razorpay', 'REST APIs', 'Tailwind CSS'],
       image: 'assets/project-ecom.svg',
       fullTitle: 'Speshway Multi-Vendor E-Commerce Platform',
       leadDescription: 'A production-grade, multi-vendor e-commerce web platform engineered with high-speed catalog browsing, real-time cart state synchronization, secure payment gateway integration, and comprehensive customer & order management.',
       quote: '“Architected and deployed ecom.speshway.site, delivering an intuitive shopping experience with dynamic facet search, real-time inventory management, and end-to-end checkout with automated notifications.”',
+      problemSolved: 'Independent retailers and vendors lacked a centralized, high-speed digital storefront to manage distributed inventories, process secure multi-vendor payments, and track fulfillment without paying prohibitive SaaS subscription fees.',
+      contribution: 'Built product catalog query APIs with dynamic multi-facet filtering, implemented Redux Toolkit persistent shopping cart, integrated Razorpay payment gateway with cryptographic webhook verification, and engineered vendor order management dashboards.',
       features: [
         {
           title: 'Product Catalog & Dynamic Filtering',
@@ -40,11 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
       subtitle: 'clothing.speshway.site',
       author: 'Speshway Solutions Pvt Ltd',
       liveUrl: 'https://clothing.speshway.site',
+      githubUrl: 'https://github.com/edukondalutatukula130404/vexa-style-hub.git',
       tech: ['HTML5/CSS3', 'JavaScript', 'Cart Engine', 'Lookbook UI', 'Responsive Design', 'SEO'],
       image: 'assets/project-clothing.svg',
       fullTitle: 'Speshway Clothing & Apparel Storefront',
       leadDescription: 'A high-conversion fashion e-commerce storefront crafted with editorial typography, interactive lookbooks, visual size and color variant selectors, and a fluid slide-over mini-cart drawer.',
       quote: '“Engineered clothing.speshway.site to offer an immersive, visual-first fashion shopping experience with smooth animations, instant size selectors, and zero-friction cart interactions.”',
+      problemSolved: 'Apparel buyers on mobile devices regularly abandon sluggish websites with complex checkout flows, slow image carousels, and poorly adapted mobile screen controls.',
+      contribution: 'Crafted a visual-first editorial layout with optimized media delivery, built a vanilla JavaScript slide-over cart drawer with persistent local storage, and tuned the critical rendering path for sub-second page loads.',
       features: [
         {
           title: 'Editorial Lookbook & Gallery',
@@ -69,11 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
       subtitle: 'erp.speshway.site',
       author: 'Speshway Solutions Pvt Ltd',
       liveUrl: 'https://erp.speshway.site',
+      githubUrl: 'https://github.com/naveen3831/Speshway-All-In-One-ERP.git',
       tech: ['PostgreSQL', 'Node.js', 'Python', 'RBAC Security', 'Financial Invoicing', 'Inventory Engine'],
       image: 'assets/project-erp.svg',
       fullTitle: 'Speshway All-in-One Cloud ERP System',
       leadDescription: 'Comprehensive enterprise management platform engineered to automate company-wide workflows: inventory tracking, warehouse logistics, GST-compliant invoicing, HR attendance, and executive financial reporting.',
       quote: '“Designed and engineered erp.speshway.site to centralize business operations, providing multi-tenant security, granular role-based authorization, and real-time ledger accounting.”',
+      problemSolved: 'Operational silos, manual Excel entry, and inventory discrepancies between warehouse hubs led to stock-outs, delayed tax filings, and lack of enterprise accountability.',
+      contribution: 'Designed normalized 3NF PostgreSQL database schemas, built JWT role-based access control (RBAC) middleware for multi-level staffing, developed automated GST tax computation modules, and created audit-trail ledger logging.',
       features: [
         {
           title: 'Multi-Warehouse Inventory & Supply Chain',
@@ -91,35 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
       metrics: '10,000+ Operations/Day • 100% Audit Integrity • 99.98% Service Reliability'
     },
     {
-      id: 'vexa',
-      category: 'mobile',
-      badge: 'MOBILE APP',
-      tagline: 'Vexa Smart Mobile Application',
-      subtitle: 'iOS & Android App',
-      author: 'Speshway Solutions Pvt Ltd',
-      liveUrl: 'https://speshway.com',
-      tech: ['Flutter', 'Dart', 'React Native', 'Firebase', 'Push Notifications', 'Offline SQLite'],
-      image: 'assets/project-vexa.svg',
-      fullTitle: 'Vexa Smart Mobile Application (iOS & Android)',
-      leadDescription: 'A production mobile application engineered for iOS and Android platforms, featuring biometric authentication, reactive state management, offline database caching, and real-time cloud notifications.',
-      quote: '“Engineered the Vexa Mobile Application with clean modular architecture, achieving native 60fps transitions, reliable offline caching, and frictionless user journeys.”',
-      features: [
-        {
-          title: 'Cross-Platform iOS & Android Experience',
-          desc: 'Engineered with shared codebase architectures delivering smooth 60fps native performance, gesture navigation, and platform-adaptive UI controls.'
-        },
-        {
-          title: 'Biometric Security & Authentication',
-          desc: 'Supports Fingerprint and FaceID biometric unlock, encrypted token storage, and secure OAuth2 session management.'
-        },
-        {
-          title: 'Real-Time Sync & Offline Caching',
-          desc: 'Offline-first database persistence that synchronizes instantly upon network recovery with low battery and network bandwidth overhead.'
-        }
-      ],
-      metrics: '60fps Native UI • Offline-First Architecture • iOS & Android Deployed'
-    },
-    {
       id: 'desktop-app',
       category: 'desktop',
       badge: 'DESKTOP APP',
@@ -127,11 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
       subtitle: 'InvoicePro Desktop',
       author: 'Speshway Solutions Pvt Ltd',
       liveUrl: 'https://github.com/edukondalutatukula130404/desktop-application',
+      githubUrl: 'https://github.com/edukondalutatukula130404/desktop-application',
       tech: ['Electron', 'React', 'Node.js', 'MongoDB', 'NSIS Installer', 'Offline-First'],
       image: 'assets/project-desktop.svg',
       fullTitle: 'InvoicePro Desktop Application Suite',
       leadDescription: 'A production cross-platform desktop application built with Electron, React, Node.js, and persistent local MongoDB storage for offline-first enterprise invoice generation, client billing, license authentication, and automated financial reporting.',
       quote: '“Engineered the InvoicePro Desktop Application with robust Electron architecture, persistent local MongoDB synchronization, automated NSIS installers, and cryptographic licensing.”',
+      problemSolved: 'Retail and wholesale billing points in areas with inconsistent internet connections could not risk billing disruptions or store sensitive financial transaction ledgers on third-party public clouds.',
+      contribution: 'Architected Electron IPC bridge between Node backend and React frontend, embedded a local MongoDB instance with automatic data indexing, implemented cryptographic machine-fingerprint licensing, and authored the NSIS Windows installer script.',
       features: [
         {
           title: 'Cross-Platform Electron & React Core',
@@ -147,6 +162,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ],
       metrics: 'Zero-Latency Offline Mode • Windows NSIS Installer • 100% Local Data Privacy'
+    },
+    {
+      id: 'vexa',
+      category: 'mobile',
+      badge: 'MOBILE APP',
+      tagline: 'Vexa Smart Mobile Application',
+      subtitle: 'iOS & Android App',
+      author: 'Speshway Solutions Pvt Ltd',
+      liveUrl: 'https://speshway.com',
+      githubUrl: 'https://github.com/edukondalutatukula130404',
+      tech: ['Flutter', 'Dart', 'React Native', 'Firebase', 'Push Notifications', 'Offline SQLite'],
+      image: 'assets/project-vexa.svg',
+      fullTitle: 'Vexa Smart Mobile Application (iOS & Android)',
+      leadDescription: 'A production mobile application engineered for iOS and Android platforms, featuring biometric authentication, reactive state management, offline database caching, and real-time cloud notifications.',
+      quote: '“Engineered the Vexa Mobile Application with clean modular architecture, achieving native 60fps transitions, reliable offline caching, and frictionless user journeys.”',
+      problemSolved: 'Mobile end users required a seamless, battery-efficient mobile application capable of operating smoothly during poor cell reception while guaranteeing secure biometric protection for sensitive credentials.',
+      contribution: 'Built responsive cross-platform Flutter mobile interfaces, integrated Firebase cloud messaging for low-latency notifications, developed an SQLite offline caching synchronization engine, and implemented device-native biometric authentication.',
+      features: [
+        {
+          title: 'Cross-Platform iOS & Android Experience',
+          desc: 'Engineered with shared codebase architectures delivering smooth 60fps native performance, gesture navigation, and platform-adaptive UI controls.'
+        },
+        {
+          title: 'Biometric Security & Authentication',
+          desc: 'Supports Fingerprint and FaceID biometric unlock, encrypted token storage, and secure OAuth2 session management.'
+        },
+        {
+          title: 'Real-Time Sync & Offline Caching',
+          desc: 'Offline-first database persistence that synchronizes instantly upon network recovery with low battery and network bandwidth overhead.'
+        }
+      ],
+      metrics: '60fps Native UI • Offline-First Architecture • iOS & Android Deployed'
     }
   ];
 
@@ -204,6 +251,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalLiveLink = document.getElementById('modalLiveLink');
     if (modalLiveLink) {
       modalLiveLink.href = proj.liveUrl || '#';
+      const liveSpan = modalLiveLink.querySelector('span');
+      if (liveSpan) {
+        liveSpan.textContent = (proj.liveUrl.includes('.site') || proj.liveUrl.includes('.com')) ? 'Live Preview ↗' : 'Live Demo ↗';
+      }
+    }
+
+    // GitHub Repo Link
+    const modalGitLink = document.getElementById('modalGitLink');
+    if (modalGitLink) {
+      modalGitLink.href = proj.githubUrl || 'https://github.com/edukondalutatukula130404';
+    }
+
+    // Problem Solved & Contribution
+    const problemEl = document.getElementById('modalProblemText');
+    if (problemEl) {
+      problemEl.textContent = proj.problemSolved || '';
+    }
+
+    const contribEl = document.getElementById('modalContributionText');
+    if (contribEl) {
+      contribEl.textContent = proj.contribution || '';
+    }
+
+    // Measurable Outcomes / Metrics
+    const metricsEl = document.getElementById('modalMetricsText');
+    if (metricsEl) {
+      metricsEl.textContent = proj.metrics || '';
     }
 
     // Features
@@ -402,11 +476,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Social Links Click Guarantee
+  // 7. Social Links Click Guarantee (Hero, Footer, Dialog profiles only)
   const realGitHubUrl = 'https://github.com/edukondalutatukula130404';
   const realLinkedInUrl = 'https://www.linkedin.com/in/edukondalu-tatukula-449789261/';
 
-  document.querySelectorAll('a[href*="github.com"]').forEach(link => {
+  document.querySelectorAll('.hero-social-list a[href*="github.com"], .footer-social-links a[href*="github.com"], .contact-info-list a[href*="github.com"]').forEach(link => {
     link.href = realGitHubUrl;
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -414,7 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.querySelectorAll('a[href*="linkedin.com"]').forEach(link => {
+  document.querySelectorAll('.hero-social-list a[href*="linkedin.com"], .footer-social-links a[href*="linkedin.com"], .contact-info-list a[href*="linkedin.com"]').forEach(link => {
     link.href = realLinkedInUrl;
     link.addEventListener('click', (e) => {
       e.preventDefault();
