@@ -260,7 +260,7 @@ button {
 /* Hero Content Grid: Left bio, Center portrait, Right links */
 .hero-showcase {
   display: grid;
-  grid-template-columns: minmax(360px, 1.25fr) auto minmax(180px, 0.75fr);
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: end;
   width: 100%;
   position: relative;
@@ -271,7 +271,7 @@ button {
 /* Left Hero Column */
 .hero-left-col {
   padding-bottom: 30px;
-  max-width: 480px;
+  max-width: 100%;
   width: 100%;
   z-index: 3;
   align-self: end;
@@ -299,7 +299,7 @@ button {
   justify-content: center;
   gap: 8px;
   height: 40px;
-  padding: 0 18px;
+  padding: 0 16px;
   box-sizing: border-box;
   border-radius: var(--radius-pill);
   background: #111111;
@@ -341,7 +341,7 @@ button {
   justify-content: center;
   gap: 8px;
   height: 40px;
-  padding: 0 18px;
+  padding: 0 16px;
   box-sizing: border-box;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.04);
