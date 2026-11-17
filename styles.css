@@ -1,5 +1,5 @@
 /* Modern Minimalist Portfolio - Exact Match to Reference Video */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   --bg-primary: #ffffff;
@@ -3084,5 +3084,258 @@ html.custom-cursor-active * {
   opacity: 0;
   transition: opacity 0.2s ease;
   will-change: transform;
+}
+
+/* =========================================
+   CINEMATIC SHOWCASE FOOTER (Exact Reference Match)
+   ========================================= */
+.showcase-footer {
+  position: relative;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 24px 36px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.showcase-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.showcase-aurora-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/footer-aurora.png');
+  background-size: cover;
+  background-position: center bottom;
+  transform: scale(1.35) translateY(8%);
+  transform-origin: bottom center;
+  opacity: 0.95;
+}
+
+.showcase-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+}
+
+.showcase-inner {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+}
+
+.showcase-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.showcase-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.showcase-sublabel {
+  font-family: 'JetBrains Mono', monospace, ui-monospace;
+  font-size: 13px;
+  color: #9ca3af;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.showcase-email-link {
+  font-size: clamp(1.4rem, 4vw, 3.2rem);
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  transition: color 0.25s ease;
+  word-break: break-word;
+}
+
+.showcase-email-link:hover {
+  color: #ccff00;
+}
+
+.showcase-nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d1d5db;
+}
+
+.showcase-nav-row a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.showcase-nav-row a:hover {
+  color: #ccff00;
+}
+
+.showcase-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 380px;
+}
+
+.showcase-build-heading {
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.showcase-build-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #9ca3af;
+  margin-bottom: 22px;
+}
+
+.showcase-btn-touch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  background-color: #ccff00;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.showcase-btn-touch:hover {
+  background-color: #b3e600;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 255, 0, 0.35);
+}
+
+.showcase-social-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.showcase-social-row a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.showcase-social-row a:hover {
+  color: #ccff00;
+}
+
+.showcase-giant-wrap {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 20px;
+  flex: 1;
+}
+
+.showcase-giant-name {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(3.2rem, 10vw, 8.8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.showcase-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: auto;
+}
+
+.showcase-legal-links {
+  display: flex;
+  gap: 24px;
+}
+
+.showcase-legal-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.showcase-legal-links a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .showcase-top-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .showcase-right-col {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
+  }
+  .showcase-giant-name {
+    font-size: clamp(2.4rem, 12vw, 5rem);
+    white-space: normal;
+  }
+  .showcase-bottom-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
 }
 
