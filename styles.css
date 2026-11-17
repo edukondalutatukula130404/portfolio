@@ -666,12 +666,359 @@ html.dark-theme .btn-download-resume:hover,
   transform: translateX(3px);
 }
 
-/* Project Cards Grid */
+/* Project Cards Grid & Showcase Stack */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-top: 36px;
+}
+
+/* =========================================
+   SHOWCASE SECTION & STACK CARDS (Reference Design)
+   ========================================= */
+.showcase-section-heading {
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-section-tag {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #ccff00;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.showcase-title {
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-title-italic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  text-transform: lowercase;
+  color: #d1d5db;
+  letter-spacing: -0.02em;
+  margin-top: -4px;
+}
+
+/* Showcase Stacked Cards Container */
+.showcase-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 36px;
+  position: relative;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
+
+/* Base Stack Card (Sticky Stacking) */
+.project-card.stack-card {
+  position: sticky;
+  top: 92px;
+  background: #0d0e14;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 310px;
+  margin-bottom: 24px;
+  padding: 0;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform, filter;
+  cursor: pointer;
+}
+
+.project-card.stack-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 28px 65px -10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(204, 255, 0, 0.08);
+  transform: none; /* override default translateY so sticky stays perfectly aligned */
+}
+
+/* Left Content Column */
+.stack-card-content {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  order: 1;
+  min-width: 0;
+}
+
+.stack-card-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stack-card-title {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.stack-card-subtitle {
+  color: #ccff00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: var(--font-mono, monospace);
+  margin: 0;
+}
+
+.stack-card-desc {
+  color: #9ca3af;
+  font-size: 12.5px;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 480px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stack-card-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.stack-tech-pill {
+  font-size: 8.5px;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 9px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.stack-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.showcase-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 15px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.showcase-btn.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.showcase-btn.btn-ghost:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.showcase-btn.btn-neon {
+  background: #ccff00;
+  color: #000000;
+  border: 1px solid #ccff00;
+  font-weight: 700;
+}
+
+.showcase-btn.btn-neon:hover {
+  background: #b3e600;
+  border-color: #b3e600;
+  box-shadow: 0 0 16px rgba(204, 255, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Right Visual Column */
+.stack-card-visual {
+  position: relative;
+  min-height: 280px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  order: 2;
+}
+
+.stack-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.project-card.stack-card:hover .stack-card-img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.stack-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(13, 14, 20, 0.75) 0%, rgba(13, 14, 20, 0.1) 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.stack-card-index {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.65);
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+/* Responsive Rules for Mobile / Tablet */
+@media (max-width: 900px) {
+  .project-card.stack-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    top: 76px;
+    margin-bottom: 20px;
+  }
+
+  .stack-card-visual {
+    order: 1;
+    min-height: 200px;
+    max-height: 240px;
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stack-card-content {
+    order: 2;
+    padding: 24px 20px;
+  }
+
+  .stack-card-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Light Theme Overrides for Showcase Stack */
+html:not(.dark-theme) .showcase-title,
+[data-theme="light"] .showcase-title {
+  color: #111827;
+}
+
+html:not(.dark-theme) .showcase-title-italic,
+[data-theme="light"] .showcase-title-italic {
+  color: #6b7280;
+}
+
+html:not(.dark-theme) .project-card.stack-card,
+[data-theme="light"] .project-card.stack-card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+html:not(.dark-theme) .stack-card-title,
+[data-theme="light"] .stack-card-title {
+  color: #111827;
+}
+
+html:not(.dark-theme) .stack-card-subtitle,
+[data-theme="light"] .stack-card-subtitle {
+  color: #4d7c0f;
+}
+
+html:not(.dark-theme) .stack-card-desc,
+[data-theme="light"] .stack-card-desc {
+  color: #4b5563;
+}
+
+html:not(.dark-theme) .stack-tech-pill,
+[data-theme="light"] .stack-tech-pill {
+  color: #4b5563;
+  border-color: #e5e7eb;
+  background: #f3f4f6;
+}
+
+html:not(.dark-theme) .showcase-btn.btn-ghost,
+[data-theme="light"] .showcase-btn.btn-ghost {
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+html:not(.dark-theme) .showcase-btn.btn-ghost:hover,
+[data-theme="light"] .showcase-btn.btn-ghost:hover {
+  background: #111827;
+  color: #ffffff;
+}
+
+html:not(.dark-theme) .stack-card-visual,
+[data-theme="light"] .stack-card-visual {
+  background: #f9fafb;
+  border-left-color: #e5e7eb;
+}
+
+html:not(.dark-theme) .stack-card-gradient,
+[data-theme="light"] .stack-card-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%, transparent 50%);
+}
+
+html:not(.dark-theme) .stack-card-index,
+[data-theme="light"] .stack-card-index {
+  color: #6b7280;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #e5e7eb;
 }
 
 .project-card {

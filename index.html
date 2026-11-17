@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edukondalu Tatukula | Full-Stack Developer</title>
   <meta name="description" content="Portfolio of Edukondalu Tatukula - Full-Stack Developer specializing in MERN Stack, React, Node.js, Python, and scalable digital solutions.">
-  <link rel="stylesheet" href="styles.css?v=5.3">
+  <link rel="stylesheet" href="styles.css?v=5.4">
 </head>
 <body class="dark-theme">
 
@@ -150,13 +150,17 @@
     <div class="container">
       <div class="section-header-wrap">
         <span class="section-watermark">PORTFOLIO</span>
-        <div class="section-header-row">
-          <h2 class="section-tag-title">/SELECTED WORK</h2>
+        <div class="section-showcase-heading">
+          <span class="showcase-section-tag">/FEATURED SHOWCASE</span>
+          <h2 class="showcase-title">
+            SELECTED
+            <span class="showcase-title-italic">work</span>
+          </h2>
         </div>
 
         <div class="work-filter-bar">
           <ul class="filter-tabs">
-            <li><button class="filter-btn active" data-filter="all">All</button></li>
+            <li><button class="filter-btn active" data-filter="all">All (06)</button></li>
             <li><button class="filter-btn" data-filter="ai">AI &amp; NLP</button></li>
             <li><button class="filter-btn" data-filter="ecom">E-Commerce</button></li>
             <li><button class="filter-btn" data-filter="enterprise">ERP &amp; Cloud</button></li>
@@ -169,244 +173,293 @@
         </div>
       </div>
 
-      <!-- 2-Column Projects Grid -->
-      <div class="projects-grid">
+      <!-- Showcase Sticky Stack Cards Container -->
+      <div class="projects-grid showcase-stack-container">
         <!-- Project 1: AI-Based Chatbot for Educational Systems -->
-        <article class="project-card" data-category="ai" data-id="chatbot">
-          <div class="card-preview-wrap">
-            <span class="card-badge">AI &amp; NLP</span>
-            <img src="assets/project-chatbot.svg" alt="AI-Based Chatbot for Educational Systems" class="card-preview-img">
-          </div>
-          <div class="card-details-wrap">
-            <div class="card-role-row">
-              <span class="card-role-badge">Role: AI &amp; NLP Engineer</span>
-              <span class="card-outcome-badge">&lt;120ms Latency • 92%+ Accuracy</span>
+        <article class="project-card stack-card" data-category="ai" data-id="chatbot" style="z-index: 1;">
+          <!-- Left Content -->
+          <div class="stack-card-content">
+            <div class="stack-card-title-group">
+              <h3 class="stack-card-title">AI EDUCATIONAL CHATBOT</h3>
+              <p class="stack-card-subtitle">AI &amp; NLP • 24/7 ACADEMIC ASSISTANCE</p>
             </div>
-            <h3 class="card-title">
-              <span>AI-Based Chatbot for Educational Systems</span>
-              <span class="card-arrow">↗</span>
-            </h3>
-            <p class="card-problem-text">
-              <strong>Problem Solved:</strong> Eliminates student delays in getting answers to course syllabus, examination schedules, and academic rubrics via 24/7 NLP intent resolution.
+            <p class="stack-card-desc">
+              An AI-powered conversational chatbot engineered with Natural Language Processing (NLP) techniques, custom intent classifiers, and real-time query resolution to provide instantaneous 24/7 academic support for students.
             </p>
-            <div class="card-tech-pills">
-              <span class="card-pill">Python</span>
-              <span class="card-pill">NLP</span>
-              <span class="card-pill">NLTK</span>
-              <span class="card-pill">Flask API</span>
-              <span class="card-pill">JavaScript</span>
+            <div class="stack-card-tech-list">
+              <span class="stack-tech-pill">PYTHON</span>
+              <span class="stack-tech-pill">NLP</span>
+              <span class="stack-tech-pill">NLTK</span>
+              <span class="stack-tech-pill">FLASK API</span>
+              <span class="stack-tech-pill">JAVASCRIPT</span>
             </div>
-            <div class="card-links-row">
-              <a href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="card-action-btn live-btn" onclick="event.stopPropagation();">
-                <span>Live Demo ↗</span>
-              </a>
-              <a href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="card-action-btn git-btn" onclick="event.stopPropagation();">
+            <div class="stack-card-actions">
+              <a href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub ↗</span>
+                <span>GitHub</span>
               </a>
-              <button type="button" class="card-action-btn case-study-btn" onclick="window.openProjectModal('chatbot'); event.stopPropagation();">
-                <span>Case Study ↗</span>
+              <a href="https://github.com/edukondalutatukula130404/AI-Based-Chatbot-for-Educational-Systems" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+              <button type="button" class="showcase-btn btn-neon" onclick="window.openProjectModal('chatbot'); event.stopPropagation();">
+                <span>Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="stack-card-visual">
+            <span class="stack-card-index">01 / 06</span>
+            <img src="assets/project-chatbot.svg" alt="AI Educational Chatbot" class="stack-card-img" loading="lazy">
+            <div class="stack-card-gradient"></div>
           </div>
         </article>
 
-        <!-- Project 2: ecom.speshway.site -->
-        <article class="project-card" data-category="ecom" data-id="ecom">
-          <div class="card-preview-wrap">
-            <span class="card-badge">REAL PROJECT</span>
-            <img src="assets/project-ecom.svg" alt="ecom.speshway.site - E-Commerce Platform" class="card-preview-img">
-          </div>
-          <div class="card-details-wrap">
-            <div class="card-role-row">
-              <span class="card-role-badge">Role: Full Stack Engineer</span>
-              <span class="card-outcome-badge">&lt;180ms Latency • 99.9% Uptime</span>
+        <!-- Project 2: Speshway Multi-Vendor E-Commerce Platform -->
+        <article class="project-card stack-card" data-category="ecom" data-id="ecom" style="z-index: 2;">
+          <!-- Left Content -->
+          <div class="stack-card-content">
+            <div class="stack-card-title-group">
+              <h3 class="stack-card-title">SPESHWAY E-COMMERCE</h3>
+              <p class="stack-card-subtitle">MULTI-VENDOR E-COMMERCE PLATFORM</p>
             </div>
-            <h3 class="card-title">
-              <span>Speshway Multi-Vendor E-Commerce Platform</span>
-              <span class="card-arrow">↗</span>
-            </h3>
-            <p class="card-problem-text">
-              <strong>Problem Solved:</strong> Centralizes fragmented merchant operations with instant catalog faceted search, Redux persistent cart, and cryptographic Razorpay payment verification.
+            <p class="stack-card-desc">
+              A production-grade, multi-vendor e-commerce web platform engineered with high-speed catalog browsing, real-time cart state synchronization, secure payment gateway integration, and comprehensive customer &amp; order management.
             </p>
-            <div class="card-tech-pills">
-              <span class="card-pill">React</span>
-              <span class="card-pill">Node.js</span>
-              <span class="card-pill">MongoDB</span>
-              <span class="card-pill">Razorpay</span>
-              <span class="card-pill">Redux</span>
+            <div class="stack-card-tech-list">
+              <span class="stack-tech-pill">MONGODB</span>
+              <span class="stack-tech-pill">EXPRESS.JS</span>
+              <span class="stack-tech-pill">REACT.JS</span>
+              <span class="stack-tech-pill">NODE.JS</span>
+              <span class="stack-tech-pill">REDUX</span>
             </div>
-            <div class="card-links-row">
-              <a href="https://ecom.speshway.site" target="_blank" rel="noopener noreferrer" class="card-action-btn live-btn" onclick="event.stopPropagation();">
-                <span>Live Preview ↗</span>
-              </a>
-              <a href="https://github.com/edukondalutatukula130404/E_commerce.git" target="_blank" rel="noopener noreferrer" class="card-action-btn git-btn" onclick="event.stopPropagation();">
+            <div class="stack-card-actions">
+              <a href="https://github.com/edukondalutatukula130404/E_commerce.git" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub ↗</span>
+                <span>GitHub</span>
               </a>
-              <button type="button" class="card-action-btn case-study-btn" onclick="window.openProjectModal('ecom'); event.stopPropagation();">
-                <span>Case Study ↗</span>
+              <a href="https://ecom.speshway.site" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+              <button type="button" class="showcase-btn btn-neon" onclick="window.openProjectModal('ecom'); event.stopPropagation();">
+                <span>Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="stack-card-visual">
+            <span class="stack-card-index">02 / 06</span>
+            <img src="assets/project-ecom.svg" alt="Speshway Multi-Vendor E-Commerce Platform" class="stack-card-img" loading="lazy">
+            <div class="stack-card-gradient"></div>
           </div>
         </article>
 
-        <!-- Project 3: clothing.speshway.site -->
-        <article class="project-card" data-category="ecom" data-id="clothing">
-          <div class="card-preview-wrap">
-            <span class="card-badge">REAL PROJECT</span>
-            <img src="assets/project-clothing.svg" alt="clothing.speshway.site - Fashion & Apparel Store" class="card-preview-img">
-          </div>
-          <div class="card-details-wrap">
-            <div class="card-role-row">
-              <span class="card-role-badge">Role: Frontend Architect</span>
-              <span class="card-outcome-badge">Sub-Second Load • 100% Mobile UI</span>
+        <!-- Project 3: Speshway Fashion & Apparel E-Store -->
+        <article class="project-card stack-card" data-category="ecom" data-id="clothing" style="z-index: 3;">
+          <!-- Left Content -->
+          <div class="stack-card-content">
+            <div class="stack-card-title-group">
+              <h3 class="stack-card-title">SPESHWAY FASHION STORE</h3>
+              <p class="stack-card-subtitle">APPAREL RETAIL &amp; DYNAMIC CATALOG STORE</p>
             </div>
-            <h3 class="card-title">
-              <span>Speshway Fashion &amp; Apparel E-Store</span>
-              <span class="card-arrow">↗</span>
-            </h3>
-            <p class="card-problem-text">
-              <strong>Problem Solved:</strong> Prevents high mobile bounce rates with editorial zoom lookbooks and a frictionless slide-over mini-cart drawer.
+            <p class="stack-card-desc">
+              A high-conversion fashion e-store frontend engineered for rapid catalog discovery, instant product detail modal previews, responsive slide-over cart management, and seamless Razorpay checkout flow.
             </p>
-            <div class="card-tech-pills">
-              <span class="card-pill">HTML5/CSS3</span>
-              <span class="card-pill">JavaScript</span>
-              <span class="card-pill">Cart Engine</span>
-              <span class="card-pill">SEO Schema</span>
+            <div class="stack-card-tech-list">
+              <span class="stack-tech-pill">REACT.JS</span>
+              <span class="stack-tech-pill">NODE.JS</span>
+              <span class="stack-tech-pill">EXPRESS</span>
+              <span class="stack-tech-pill">MONGODB</span>
+              <span class="stack-tech-pill">RAZORPAY</span>
             </div>
-            <div class="card-links-row">
-              <a href="https://clothing.speshway.site" target="_blank" rel="noopener noreferrer" class="card-action-btn live-btn" onclick="event.stopPropagation();">
-                <span>Live Preview ↗</span>
-              </a>
-              <a href="https://github.com/edukondalutatukula130404/vexa-style-hub.git" target="_blank" rel="noopener noreferrer" class="card-action-btn git-btn" onclick="event.stopPropagation();">
+            <div class="stack-card-actions">
+              <a href="https://github.com/edukondalutatukula130404/vexa-style-hub.git" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub ↗</span>
+                <span>GitHub</span>
               </a>
-              <button type="button" class="card-action-btn case-study-btn" onclick="window.openProjectModal('clothing'); event.stopPropagation();">
-                <span>Case Study ↗</span>
+              <a href="https://clothing.speshway.site" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+              <button type="button" class="showcase-btn btn-neon" onclick="window.openProjectModal('clothing'); event.stopPropagation();">
+                <span>Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="stack-card-visual">
+            <span class="stack-card-index">03 / 06</span>
+            <img src="assets/project-clothing.svg" alt="Speshway Fashion &amp; Apparel Store" class="stack-card-img" loading="lazy">
+            <div class="stack-card-gradient"></div>
           </div>
         </article>
 
-        <!-- Project 4: erp.speshway.site -->
-        <article class="project-card" data-category="enterprise" data-id="erp">
-          <div class="card-preview-wrap">
-            <span class="card-badge">ENTERPRISE</span>
-            <img src="assets/project-erp.svg" alt="erp.speshway.site - All-in-One Cloud ERP" class="card-preview-img">
-          </div>
-          <div class="card-details-wrap">
-            <div class="card-role-row">
-              <span class="card-role-badge">Role: Backend &amp; Database Architect</span>
-              <span class="card-outcome-badge">10,000+ Ops/Day • 100% Audit Trail</span>
+        <!-- Project 4: Speshway All-in-One Cloud ERP -->
+        <article class="project-card stack-card" data-category="enterprise" data-id="erp" style="z-index: 4;">
+          <!-- Left Content -->
+          <div class="stack-card-content">
+            <div class="stack-card-title-group">
+              <h3 class="stack-card-title">SPESHWAY CLOUD ERP</h3>
+              <p class="stack-card-subtitle">ENTERPRISE SAAS &amp; INVENTORY SYSTEM</p>
             </div>
-            <h3 class="card-title">
-              <span>Speshway All-in-One Cloud ERP System</span>
-              <span class="card-arrow">↗</span>
-            </h3>
-            <p class="card-problem-text">
-              <strong>Problem Solved:</strong> Eliminates spreadsheet mismatches across warehouses with live stock ledger synchronization, GST invoicing, and granular RBAC security.
+            <p class="stack-card-desc">
+              An enterprise-grade, multi-branch resource planning platform delivering real-time stock ledger synchronization, GST billing, multi-tier user role authorization (RBAC), and automated financial reporting.
             </p>
-            <div class="card-tech-pills">
-              <span class="card-pill">PostgreSQL (3NF)</span>
-              <span class="card-pill">Node.js</span>
-              <span class="card-pill">Python</span>
-              <span class="card-pill">RBAC</span>
+            <div class="stack-card-tech-list">
+              <span class="stack-tech-pill">POSTGRESQL</span>
+              <span class="stack-tech-pill">NODE.JS</span>
+              <span class="stack-tech-pill">PYTHON</span>
+              <span class="stack-tech-pill">PRISMA</span>
+              <span class="stack-tech-pill">RBAC</span>
             </div>
-            <div class="card-links-row">
-              <a href="https://erp.speshway.site" target="_blank" rel="noopener noreferrer" class="card-action-btn live-btn" onclick="event.stopPropagation();">
-                <span>Live Preview ↗</span>
-              </a>
-              <a href="https://github.com/naveen3831/Speshway-All-In-One-ERP.git" target="_blank" rel="noopener noreferrer" class="card-action-btn git-btn" onclick="event.stopPropagation();">
+            <div class="stack-card-actions">
+              <a href="https://github.com/naveen3831/Speshway-All-In-One-ERP.git" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub ↗</span>
+                <span>GitHub</span>
               </a>
-              <button type="button" class="card-action-btn case-study-btn" onclick="window.openProjectModal('erp'); event.stopPropagation();">
-                <span>Case Study ↗</span>
+              <a href="https://erp.speshway.site" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+              <button type="button" class="showcase-btn btn-neon" onclick="window.openProjectModal('erp'); event.stopPropagation();">
+                <span>Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="stack-card-visual">
+            <span class="stack-card-index">04 / 06</span>
+            <img src="assets/project-erp.svg" alt="Speshway All-in-One Cloud ERP" class="stack-card-img" loading="lazy">
+            <div class="stack-card-gradient"></div>
           </div>
         </article>
 
-        <!-- Project 5: vexa mobile app -->
-        <article class="project-card" data-category="mobile" data-id="vexa">
-          <div class="card-preview-wrap">
-            <span class="card-badge">MOBILE APP</span>
-            <img src="assets/project-vexa.svg" alt="Vexa Smart Mobile Application" class="card-preview-img">
-          </div>
-          <div class="card-details-wrap">
-            <div class="card-role-row">
-              <span class="card-role-badge">Role: Mobile App Developer</span>
-              <span class="card-outcome-badge">60fps Native UI • Offline SQLite Sync</span>
+        <!-- Project 5: Vexa Smart Mobile Application -->
+        <article class="project-card stack-card" data-category="mobile" data-id="vexa" style="z-index: 5;">
+          <!-- Left Content -->
+          <div class="stack-card-content">
+            <div class="stack-card-title-group">
+              <h3 class="stack-card-title">VEXA MOBILE APP</h3>
+              <p class="stack-card-subtitle">CROSS-PLATFORM SMART MOBILE APPLICATION</p>
             </div>
-            <h3 class="card-title">
-              <span>Vexa Smart Mobile Application</span>
-              <span class="card-arrow">↗</span>
-            </h3>
-            <p class="card-problem-text">
-              <strong>Problem Solved:</strong> Delivers secure mobile account management with biometric fingerprint authentication and offline SQLite transaction synchronization.
+            <p class="stack-card-desc">
+              A high-performance Android &amp; iOS mobile app developed with Flutter and Firebase, featuring real-time push messaging, biometric fingerprint authentication, offline SQLite caching, and fluid 60fps animations.
             </p>
-            <div class="card-tech-pills">
-              <span class="card-pill">Flutter</span>
-              <span class="card-pill">Firebase</span>
-              <span class="card-pill">REST APIs</span>
-              <span class="card-pill">SQLite</span>
+            <div class="stack-card-tech-list">
+              <span class="stack-tech-pill">FLUTTER</span>
+              <span class="stack-tech-pill">DART</span>
+              <span class="stack-tech-pill">FIREBASE</span>
+              <span class="stack-tech-pill">SQLITE</span>
+              <span class="stack-tech-pill">REST APIS</span>
             </div>
-            <div class="card-links-row">
-              <a href="https://speshway.com" target="_blank" rel="noopener noreferrer" class="card-action-btn live-btn" onclick="event.stopPropagation();">
-                <span>Live Preview ↗</span>
-              </a>
-              <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="card-action-btn git-btn" onclick="event.stopPropagation();">
+            <div class="stack-card-actions">
+              <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub ↗</span>
+                <span>GitHub</span>
               </a>
-              <button type="button" class="card-action-btn case-study-btn" onclick="window.openProjectModal('vexa'); event.stopPropagation();">
-                <span>Case Study ↗</span>
+              <a href="https://speshway.com" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+              <button type="button" class="showcase-btn btn-neon" onclick="window.openProjectModal('vexa'); event.stopPropagation();">
+                <span>Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="stack-card-visual">
+            <span class="stack-card-index">05 / 06</span>
+            <img src="assets/project-vexa.svg" alt="Vexa Smart Mobile Application" class="stack-card-img" loading="lazy">
+            <div class="stack-card-gradient"></div>
           </div>
         </article>
 
         <!-- Project 6: InvoicePro Desktop Application -->
-        <article class="project-card" data-category="desktop" data-id="desktop-app" style="position: relative;">
-          <!-- Stretched Native Anchor covering entire card for 100% pop-up-free navigation -->
-          <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="stretched-card-link" aria-label="Open Edukondalu's GitHub Profile"></a>
-
-          <div class="card-preview-wrap">
-            <span class="card-badge">DESKTOP APP</span>
-            <img src="assets/project-desktop.svg" alt="InvoicePro Desktop Application Suite" class="card-preview-img">
-          </div>
-          <div class="card-details-wrap">
-            <div class="card-role-row">
-              <span class="card-role-badge">Role: Lead Desktop Developer</span>
-              <span class="card-outcome-badge">100% Offline-First • Local Privacy</span>
+        <article class="project-card stack-card" data-category="desktop" data-id="desktop-app" style="z-index: 6;">
+          <!-- Left Content -->
+          <div class="stack-card-content">
+            <div class="stack-card-title-group">
+              <h3 class="stack-card-title">INVOICEPRO DESKTOP</h3>
+              <p class="stack-card-subtitle">OFFLINE-FIRST POS &amp; BILLING SUITE</p>
             </div>
-            <h3 class="card-title">
-              <span>InvoicePro Desktop Application Suite</span>
-              <span class="card-arrow">↗</span>
-            </h3>
-            <p class="card-problem-text">
-              <strong>Problem Solved:</strong> Prevents network outage disruptions at commercial billing counters with an offline-first Electron core and embedded local MongoDB storage.
+            <p class="stack-card-desc">
+              A standalone cross-platform desktop application engineered with Electron and React, featuring an offline-first embedded database, rapid thermal receipt printing, barcode parsing, and GST compliant invoice generation.
             </p>
-            <div class="card-tech-pills">
-              <span class="card-pill">Electron</span>
-              <span class="card-pill">React</span>
-              <span class="card-pill">Local MongoDB</span>
-              <span class="card-pill">NSIS Installer</span>
+            <div class="stack-card-tech-list">
+              <span class="stack-tech-pill">ELECTRON</span>
+              <span class="stack-tech-pill">REACT</span>
+              <span class="stack-tech-pill">LOCAL MONGODB</span>
+              <span class="stack-tech-pill">NODE.JS</span>
+              <span class="stack-tech-pill">NSIS</span>
             </div>
-            <div class="card-links-row" style="position: relative; z-index: 10;">
-              <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="card-action-btn live-btn" onclick="event.stopPropagation();" title="Open Edukondalu's GitHub Profile">
-                <span>Live Demo ↗</span>
-              </a>
-              <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="card-action-btn git-btn" onclick="event.stopPropagation();" title="Open Edukondalu's GitHub Profile">
+            <div class="stack-card-actions">
+              <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub ↗</span>
+                <span>GitHub</span>
               </a>
-              <button type="button" class="card-action-btn case-study-btn" onclick="window.openProjectModal('desktop-app'); event.stopPropagation();">
-                <span>Case Study ↗</span>
+              <a href="https://github.com/edukondalutatukula130404" target="_blank" rel="noopener noreferrer" class="showcase-btn btn-ghost" onclick="event.stopPropagation();">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+              <button type="button" class="showcase-btn btn-neon" onclick="window.openProjectModal('desktop-app'); event.stopPropagation();">
+                <span>Details</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </button>
             </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="stack-card-visual">
+            <span class="stack-card-index">06 / 06</span>
+            <img src="assets/project-desktop.svg" alt="InvoicePro Desktop Application Suite" class="stack-card-img" loading="lazy">
+            <div class="stack-card-gradient"></div>
           </div>
         </article>
       </div>
@@ -1012,7 +1065,7 @@
   <div class="custom-cursor-ring" id="customCursorRing" aria-hidden="true"></div>
   <div class="custom-cursor-dot" id="customCursorDot" aria-hidden="true"></div>
 
-  <script src="script.js?v=5.3"></script>
+  <script src="script.js?v=5.4"></script>
 </body>
 </html>
 

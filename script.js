@@ -223,13 +223,16 @@ document.addEventListener('DOMContentLoaded', () => {
       projectCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (filterValue === 'all' || cardCategory === filterValue) {
-          card.style.display = 'flex';
+          card.style.display = '';
           card.style.animation = `cardReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s both`;
           delay += 0.05;
         } else {
           card.style.display = 'none';
         }
       });
+      if (typeof handleCardStackScroll === 'function') {
+        handleCardStackScroll();
+      }
     });
   });
 
@@ -337,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind project cards
   projectCards.forEach(card => {
     card.addEventListener('click', (e) => {
-      if (e.target.closest('.card-links-row') || e.target.closest('a') || e.target.closest('button')) {
+      if (e.target.closest('.card-links-row') || e.target.closest('.stack-card-actions') || e.target.closest('a') || e.target.closest('button')) {
         return;
       }
       const id = card.getAttribute('data-id');
@@ -346,11 +349,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Prevent card click when clicking action buttons
-  document.querySelectorAll('.card-links-row a, .card-links-row button').forEach(el => {
+  document.querySelectorAll('.card-links-row a, .card-links-row button, .stack-card-actions a, .stack-card-actions button').forEach(el => {
     el.addEventListener('click', (e) => {
       e.stopPropagation();
     });
   });
+
+  // Sticky Stack Cards Scrubbing Animation (Matches charanteja.online GSAP feel)
+  const stackCards = document.querySelectorAll('.stack-card');
+  function handleCardStackScroll() {
+    if (!stackCards.length) return;
+    const stickyTop = window.innerWidth <= 900 ? 76 : 92;
+    const windowH = window.innerHeight;
+
+    const visibleCards = Array.from(stackCards).filter(c => c.style.display !== 'none');
+
+    visibleCards.forEach((card, idx) => {
+      if (idx < visibleCards.length - 1) {
+        const nextCard = visibleCards[idx + 1];
+        const nextRect = nextCard.getBoundingClientRect();
+        const totalDist = windowH - stickyTop;
+        const currentDist = nextRect.top - stickyTop;
+
+        if (currentDist <= 0) {
+          card.style.transform = 'scale(0.94)';
+          card.style.filter = 'brightness(0.65)';
+        } else if (currentDist < totalDist) {
+          const progress = 1 - (currentDist / totalDist);
+          const scale = 1 - (progress * 0.06); // 1.0 -> 0.94
+          const brightness = 1 - (progress * 0.35); // 1.0 -> 0.65
+          card.style.transform = `scale(${scale.toFixed(3)})`;
+          card.style.filter = `brightness(${brightness.toFixed(3)})`;
+        } else {
+          card.style.transform = 'scale(1)';
+          card.style.filter = 'brightness(1)';
+        }
+      } else {
+        card.style.transform = 'scale(1)';
+        card.style.filter = 'brightness(1)';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', () => requestAnimationFrame(handleCardStackScroll), { passive: true });
+  window.addEventListener('resize', () => requestAnimationFrame(handleCardStackScroll), { passive: true });
+  handleCardStackScroll();
 
   // Helper for Email Validation
   function isValidEmail(email) {
