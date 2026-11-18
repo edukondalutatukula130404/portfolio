@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fullTitle: 'Speshway Clothing & Apparel Storefront',
       leadDescription: 'An elegant, high-conversion online fashion storefront featuring dynamic category carousels, responsive lookbook galleries, real-time size & inventory pickers, and smooth checkout.',
       description: 'An elegant, high-conversion online fashion storefront featuring dynamic category carousels, responsive lookbook galleries, real-time size & inventory pickers, and smooth checkout.',
-      image: 'assets/showcase-clothing.jpg?v=2',
+      image: 'assets/showcase-clothing.jpg?v=3',
       githubUrl: 'https://github.com/edukondalutatukula130404/clothing_web.git',
       liveUrl: 'https://clothing.speshway.site',
       github: 'https://github.com/edukondalutatukula130404/clothing_web.git',
